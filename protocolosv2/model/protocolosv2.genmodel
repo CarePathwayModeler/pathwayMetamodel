@@ -28,9 +28,6 @@
     <genClasses ecoreClass="protocolosv2.ecore#//Numeric">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/value"/>
     </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Text">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Text/value"/>
-    </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//YesOrNo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/value"/>
     </genClasses>
@@ -52,6 +49,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/elemento"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/sequence"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/operation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/variable"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/id"/>
@@ -91,14 +90,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/url"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/operation"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Expression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Expression/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/operation"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Operation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Operation/sequence"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operation/Operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Operation/operand"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Category">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Category/name"/>
@@ -147,5 +143,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/clinical_indication"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/quantity"/>
     </genClasses>
+    <genClasses ecoreClass="protocolosv2.ecore#//Operand"/>
   </genPackages>
 </genmodel:GenModel>
