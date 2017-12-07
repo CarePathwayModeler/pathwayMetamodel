@@ -72,8 +72,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import protocolosv2.Protocolosv2Factory;
 import protocolosv2.Protocolosv2Package;
 import protocolosv2.provider.Protocolosv2EditPlugin;
-
-
 import org.eclipse.core.runtime.Path;
 
 import org.eclipse.jface.viewers.ISelection;
@@ -395,8 +393,7 @@ public class Protocolosv2ModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;

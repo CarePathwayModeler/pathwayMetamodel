@@ -179,7 +179,7 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' reference.
+	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOperation()
@@ -459,23 +459,6 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * @generated
 	 */
 	public Operation getOperation() {
-		if (operation != null && operation.eIsProxy()) {
-			InternalEObject oldOperation = (InternalEObject)operation;
-			operation = (Operation)eResolveProxy(oldOperation);
-			if (operation != oldOperation) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Protocolosv2Package.SEQUENCE__OPERATION, oldOperation, operation));
-			}
-		}
-		return operation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Operation basicGetOperation() {
 		return operation;
 	}
 
@@ -503,9 +486,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 		if (newOperation != operation) {
 			NotificationChain msgs = null;
 			if (operation != null)
-				msgs = ((InternalEObject)operation).eInverseRemove(this, Protocolosv2Package.OPERATION__SEQUENCE, Operation.class, msgs);
+				msgs = ((InternalEObject)operation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Protocolosv2Package.SEQUENCE__OPERATION, null, msgs);
 			if (newOperation != null)
-				msgs = ((InternalEObject)newOperation).eInverseAdd(this, Protocolosv2Package.OPERATION__SEQUENCE, Operation.class, msgs);
+				msgs = ((InternalEObject)newOperation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Protocolosv2Package.SEQUENCE__OPERATION, null, msgs);
 			msgs = basicSetOperation(newOperation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -529,10 +512,6 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 				if (passoDeSaida != null)
 					msgs = ((InternalEObject)passoDeSaida).eInverseRemove(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA, Element.class, msgs);
 				return basicSetPassoDeSaida((Element)otherEnd, msgs);
-			case Protocolosv2Package.SEQUENCE__OPERATION:
-				if (operation != null)
-					msgs = ((InternalEObject)operation).eInverseRemove(this, Protocolosv2Package.OPERATION__SEQUENCE, Operation.class, msgs);
-				return basicSetOperation((Operation)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -582,8 +561,7 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			case Protocolosv2Package.SEQUENCE__DESCRIPTION:
 				return getDescription();
 			case Protocolosv2Package.SEQUENCE__OPERATION:
-				if (resolve) return getOperation();
-				return basicGetOperation();
+				return getOperation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

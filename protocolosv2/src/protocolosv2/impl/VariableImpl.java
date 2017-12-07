@@ -4,8 +4,6 @@ package protocolosv2.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import protocolosv2.Protocolosv2Package;
 import protocolosv2.Variable;
 
@@ -16,7 +14,7 @@ import protocolosv2.Variable;
  *
  * @generated
  */
-public abstract class VariableImpl extends MinimalEObjectImpl.Container implements Variable {
+public abstract class VariableImpl extends OperandImpl implements Variable {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

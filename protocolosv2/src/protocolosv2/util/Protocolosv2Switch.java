@@ -69,6 +69,7 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 			case Protocolosv2Package.VARIABLE: {
 				Variable variable = (Variable)theEObject;
 				T result = caseVariable(variable);
+				if (result == null) result = caseOperand(variable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -76,13 +77,7 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 				Numeric numeric = (Numeric)theEObject;
 				T result = caseNumeric(numeric);
 				if (result == null) result = caseVariable(numeric);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Protocolosv2Package.TEXT: {
-				Text text = (Text)theEObject;
-				T result = caseText(text);
-				if (result == null) result = caseVariable(text);
+				if (result == null) result = caseOperand(numeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,6 +85,7 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 				YesOrNo yesOrNo = (YesOrNo)theEObject;
 				T result = caseYesOrNo(yesOrNo);
 				if (result == null) result = caseVariable(yesOrNo);
+				if (result == null) result = caseOperand(yesOrNo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,16 +155,10 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Protocolosv2Package.EXPRESSION: {
-				Expression expression = (Expression)theEObject;
-				T result = caseExpression(expression);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Protocolosv2Package.OPERATION: {
 				Operation operation = (Operation)theEObject;
 				T result = caseOperation(operation);
-				if (result == null) result = caseExpression(operation);
+				if (result == null) result = caseOperand(operation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -199,6 +189,12 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 			case Protocolosv2Package.ADMISSION: {
 				Admission admission = (Admission)theEObject;
 				T result = caseAdmission(admission);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Protocolosv2Package.OPERAND: {
+				Operand operand = (Operand)theEObject;
+				T result = caseOperand(operand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -233,21 +229,6 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNumeric(Numeric object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Text</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseText(Text object) {
 		return null;
 	}
 
@@ -417,21 +398,6 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExpression(Expression object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -518,6 +484,21 @@ public class Protocolosv2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAdmission(Admission object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperand(Operand object) {
 		return null;
 	}
 

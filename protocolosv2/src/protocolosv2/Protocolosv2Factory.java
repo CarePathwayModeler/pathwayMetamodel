@@ -31,15 +31,6 @@ public interface Protocolosv2Factory extends EFactory {
 	Numeric createNumeric();
 
 	/**
-	 * Returns a new object of class '<em>Text</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Text</em>'.
-	 * @generated
-	 */
-	Text createText();
-
-	/**
 	 * Returns a new object of class '<em>Yes Or No</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,15 +119,6 @@ public interface Protocolosv2Factory extends EFactory {
 	 * @generated
 	 */
 	Sequence createSequence();
-
-	/**
-	 * Returns a new object of class '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression</em>'.
-	 * @generated
-	 */
-	Expression createExpression();
 
 	/**
 	 * Returns a new object of class '<em>Operation</em>'.

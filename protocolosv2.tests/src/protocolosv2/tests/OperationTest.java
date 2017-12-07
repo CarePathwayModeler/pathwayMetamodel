@@ -13,7 +13,7 @@ import protocolosv2.Protocolosv2Factory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class OperationTest extends ExpressionTest {
+public class OperationTest extends OperandTest {
 
 	/**
 	 * <!-- begin-user-doc -->

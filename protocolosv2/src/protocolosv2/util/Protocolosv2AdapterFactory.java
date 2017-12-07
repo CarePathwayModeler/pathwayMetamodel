@@ -76,10 +76,6 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 				return createNumericAdapter();
 			}
 			@Override
-			public Adapter caseText(Text object) {
-				return createTextAdapter();
-			}
-			@Override
 			public Adapter caseYesOrNo(YesOrNo object) {
 				return createYesOrNoAdapter();
 			}
@@ -124,10 +120,6 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 				return createSequenceAdapter();
 			}
 			@Override
-			public Adapter caseExpression(Expression object) {
-				return createExpressionAdapter();
-			}
-			@Override
 			public Adapter caseOperation(Operation object) {
 				return createOperationAdapter();
 			}
@@ -150,6 +142,10 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAdmission(Admission object) {
 				return createAdmissionAdapter();
+			}
+			@Override
+			public Adapter caseOperand(Operand object) {
+				return createOperandAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -196,20 +192,6 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNumericAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link protocolosv2.Text <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see protocolosv2.Text
-	 * @generated
-	 */
-	public Adapter createTextAdapter() {
 		return null;
 	}
 
@@ -368,20 +350,6 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link protocolosv2.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see protocolosv2.Expression
-	 * @generated
-	 */
-	public Adapter createExpressionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link protocolosv2.Operation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -462,6 +430,20 @@ public class Protocolosv2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAdmissionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link protocolosv2.Operand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see protocolosv2.Operand
+	 * @generated
+	 */
+	public Adapter createOperandAdapter() {
 		return null;
 	}
 

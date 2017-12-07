@@ -20,9 +20,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import protocolosv2.Category;
 import protocolosv2.Element;
+import protocolosv2.Operation;
 import protocolosv2.Protocol;
 import protocolosv2.Protocolosv2Package;
 import protocolosv2.Sequence;
+import protocolosv2.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,6 +41,8 @@ import protocolosv2.Sequence;
  *   <li>{@link protocolosv2.impl.ProtocolImpl#getElemento <em>Elemento</em>}</li>
  *   <li>{@link protocolosv2.impl.ProtocolImpl#getSequence <em>Sequence</em>}</li>
  *   <li>{@link protocolosv2.impl.ProtocolImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link protocolosv2.impl.ProtocolImpl#getOperation <em>Operation</em>}</li>
+ *   <li>{@link protocolosv2.impl.ProtocolImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -153,6 +157,26 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	 * @ordered
 	 */
 	protected EList<Category> category;
+
+	/**
+	 * The cached value of the '{@link #getOperation() <em>Operation</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperation()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Operation> operation;
+
+	/**
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Variable> variable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -298,6 +322,30 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Operation> getOperation() {
+		if (operation == null) {
+			operation = new EObjectContainmentEList<Operation>(Operation.class, this, Protocolosv2Package.PROTOCOL__OPERATION);
+		}
+		return operation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Variable> getVariable() {
+		if (variable == null) {
+			variable = new EObjectContainmentEList<Variable>(Variable.class, this, Protocolosv2Package.PROTOCOL__VARIABLE);
+		}
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -307,6 +355,10 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 				return ((InternalEList<?>)getSequence()).basicRemove(otherEnd, msgs);
 			case Protocolosv2Package.PROTOCOL__CATEGORY:
 				return ((InternalEList<?>)getCategory()).basicRemove(otherEnd, msgs);
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+				return ((InternalEList<?>)getOperation()).basicRemove(otherEnd, msgs);
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
+				return ((InternalEList<?>)getVariable()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -333,6 +385,10 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 				return getSequence();
 			case Protocolosv2Package.PROTOCOL__CATEGORY:
 				return getCategory();
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+				return getOperation();
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
+				return getVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -370,6 +426,14 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 				getCategory().clear();
 				getCategory().addAll((Collection<? extends Category>)newValue);
 				return;
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+				getOperation().clear();
+				getOperation().addAll((Collection<? extends Operation>)newValue);
+				return;
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
+				getVariable().clear();
+				getVariable().addAll((Collection<? extends Variable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -403,6 +467,12 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 			case Protocolosv2Package.PROTOCOL__CATEGORY:
 				getCategory().clear();
 				return;
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+				getOperation().clear();
+				return;
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
+				getVariable().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -429,6 +499,10 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 				return sequence != null && !sequence.isEmpty();
 			case Protocolosv2Package.PROTOCOL__CATEGORY:
 				return category != null && !category.isEmpty();
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+				return operation != null && !operation.isEmpty();
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
+				return variable != null && !variable.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

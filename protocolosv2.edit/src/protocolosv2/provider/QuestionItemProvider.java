@@ -256,11 +256,6 @@ public class QuestionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Protocolosv2Package.Literals.QUESTION__ANSWERS,
-				 Protocolosv2Factory.eINSTANCE.createText()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Protocolosv2Package.Literals.QUESTION__ANSWERS,
 				 Protocolosv2Factory.eINSTANCE.createYesOrNo()));
 	}
 

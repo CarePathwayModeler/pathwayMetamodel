@@ -2,7 +2,6 @@
  */
 package protocolosv2;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +13,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Variable extends EObject {
+public interface Variable extends Operand {
 } // Variable

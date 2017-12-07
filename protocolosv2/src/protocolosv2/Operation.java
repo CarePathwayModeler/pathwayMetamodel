@@ -13,33 +13,15 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link protocolosv2.Operation#getSequence <em>Sequence</em>}</li>
  *   <li>{@link protocolosv2.Operation#getOperator <em>Operator</em>}</li>
+ *   <li>{@link protocolosv2.Operation#getOperand <em>Operand</em>}</li>
  * </ul>
  *
  * @see protocolosv2.Protocolosv2Package#getOperation()
  * @model
  * @generated
  */
-public interface Operation extends Expression {
-	/**
-	 * Returns the value of the '<em><b>Sequence</b></em>' reference list.
-	 * The list contents are of type {@link protocolosv2.Sequence}.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Sequence#getOperation <em>Operation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sequence</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sequence</em>' reference list.
-	 * @see protocolosv2.Protocolosv2Package#getOperation_Sequence()
-	 * @see protocolosv2.Sequence#getOperation
-	 * @model opposite="operation"
-	 * @generated
-	 */
-	EList<Sequence> getSequence();
-
+public interface Operation extends Operand {
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
 	 * The literals are from the enumeration {@link protocolosv2.Operador}.
@@ -68,5 +50,21 @@ public interface Operation extends Expression {
 	 * @generated
 	 */
 	void setOperator(Operador value);
+
+	/**
+	 * Returns the value of the '<em><b>Operand</b></em>' containment reference list.
+	 * The list contents are of type {@link protocolosv2.Operand}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operand</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operand</em>' containment reference list.
+	 * @see protocolosv2.Protocolosv2Package#getOperation_Operand()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Operand> getOperand();
 
 } // Operation

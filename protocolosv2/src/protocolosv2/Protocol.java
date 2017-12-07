@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link protocolosv2.Protocol#getElemento <em>Elemento</em>}</li>
  *   <li>{@link protocolosv2.Protocol#getSequence <em>Sequence</em>}</li>
  *   <li>{@link protocolosv2.Protocol#getCategory <em>Category</em>}</li>
+ *   <li>{@link protocolosv2.Protocol#getOperation <em>Operation</em>}</li>
+ *   <li>{@link protocolosv2.Protocol#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @see protocolosv2.Protocolosv2Package#getProtocol()
@@ -180,5 +182,37 @@ public interface Protocol extends EObject {
 	 * @generated
 	 */
 	EList<Category> getCategory();
+
+	/**
+	 * Returns the value of the '<em><b>Operation</b></em>' containment reference list.
+	 * The list contents are of type {@link protocolosv2.Operation}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operation</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operation</em>' containment reference list.
+	 * @see protocolosv2.Protocolosv2Package#getProtocol_Operation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Operation> getOperation();
+
+	/**
+	 * Returns the value of the '<em><b>Variable</b></em>' containment reference list.
+	 * The list contents are of type {@link protocolosv2.Variable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Variable</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Variable</em>' containment reference list.
+	 * @see protocolosv2.Protocolosv2Package#getProtocol_Variable()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Variable> getVariable();
 
 } // Protocol

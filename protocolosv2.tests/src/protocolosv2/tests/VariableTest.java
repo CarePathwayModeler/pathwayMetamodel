@@ -2,8 +2,6 @@
  */
 package protocolosv2.tests;
 
-import junit.framework.TestCase;
-
 import protocolosv2.Variable;
 
 /**
@@ -12,15 +10,7 @@ import protocolosv2.Variable;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class VariableTest extends TestCase {
-
-	/**
-	 * The fixture for this Variable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Variable fixture = null;
+public abstract class VariableTest extends OperandTest {
 
 	/**
 	 * Constructs a new Variable test case with the given name.
@@ -33,23 +23,14 @@ public abstract class VariableTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Variable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Variable fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Variable test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Variable getFixture() {
-		return fixture;
+		return (Variable)fixture;
 	}
 
 } //VariableTest

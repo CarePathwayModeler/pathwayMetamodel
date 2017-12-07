@@ -52,7 +52,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/operation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/variable"/>
     </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Element">
+    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/type_verbose"/>
@@ -143,6 +143,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/clinical_indication"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/quantity"/>
     </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Operand"/>
+    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Operand"/>
   </genPackages>
 </genmodel:GenModel>

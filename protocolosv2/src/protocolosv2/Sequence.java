@@ -242,28 +242,26 @@ public interface Sequence extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Operation</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Operation#getSequence <em>Sequence</em>}'.
+	 * Returns the value of the '<em><b>Operation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Operation</em>' reference isn't clear,
+	 * If the meaning of the '<em>Operation</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operation</em>' reference.
+	 * @return the value of the '<em>Operation</em>' containment reference.
 	 * @see #setOperation(Operation)
 	 * @see protocolosv2.Protocolosv2Package#getSequence_Operation()
-	 * @see protocolosv2.Operation#getSequence
-	 * @model opposite="sequence"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Operation getOperation();
 
 	/**
-	 * Sets the value of the '{@link protocolosv2.Sequence#getOperation <em>Operation</em>}' reference.
+	 * Sets the value of the '{@link protocolosv2.Sequence#getOperation <em>Operation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Operation</em>' reference.
+	 * @param value the new value of the '<em>Operation</em>' containment reference.
 	 * @see #getOperation()
 	 * @generated
 	 */

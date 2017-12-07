@@ -174,6 +174,8 @@ public class ProtocolItemProvider
 			childrenFeatures.add(Protocolosv2Package.Literals.PROTOCOL__ELEMENTO);
 			childrenFeatures.add(Protocolosv2Package.Literals.PROTOCOL__SEQUENCE);
 			childrenFeatures.add(Protocolosv2Package.Literals.PROTOCOL__CATEGORY);
+			childrenFeatures.add(Protocolosv2Package.Literals.PROTOCOL__OPERATION);
+			childrenFeatures.add(Protocolosv2Package.Literals.PROTOCOL__VARIABLE);
 		}
 		return childrenFeatures;
 	}
@@ -238,6 +240,8 @@ public class ProtocolItemProvider
 			case Protocolosv2Package.PROTOCOL__ELEMENTO:
 			case Protocolosv2Package.PROTOCOL__SEQUENCE:
 			case Protocolosv2Package.PROTOCOL__CATEGORY:
+			case Protocolosv2Package.PROTOCOL__OPERATION:
+			case Protocolosv2Package.PROTOCOL__VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -294,6 +298,21 @@ public class ProtocolItemProvider
 			(createChildParameter
 				(Protocolosv2Package.Literals.PROTOCOL__CATEGORY,
 				 Protocolosv2Factory.eINSTANCE.createCategory()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Protocolosv2Package.Literals.PROTOCOL__OPERATION,
+				 Protocolosv2Factory.eINSTANCE.createOperation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Protocolosv2Package.Literals.PROTOCOL__VARIABLE,
+				 Protocolosv2Factory.eINSTANCE.createNumeric()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Protocolosv2Package.Literals.PROTOCOL__VARIABLE,
+				 Protocolosv2Factory.eINSTANCE.createYesOrNo()));
 	}
 
 	/**

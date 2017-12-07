@@ -58,6 +58,34 @@ public interface Protocolosv2Package extends EPackage {
 	Protocolosv2Package eINSTANCE = protocolosv2.impl.Protocolosv2PackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link protocolosv2.impl.OperandImpl <em>Operand</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see protocolosv2.impl.OperandImpl
+	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperand()
+	 * @generated
+	 */
+	int OPERAND = 19;
+
+	/**
+	 * The number of structural features of the '<em>Operand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERAND_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Operand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERAND_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link protocolosv2.impl.VariableImpl <em>Variable</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,7 +102,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 0;
+	int VARIABLE_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -83,7 +111,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = 0;
+	int VARIABLE_OPERATION_COUNT = OPERAND_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link protocolosv2.impl.NumericImpl <em>Numeric</em>}' class.
@@ -123,43 +151,6 @@ public interface Protocolosv2Package extends EPackage {
 	int NUMERIC_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link protocolosv2.impl.TextImpl <em>Text</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see protocolosv2.impl.TextImpl
-	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getText()
-	 * @generated
-	 */
-	int TEXT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT__VALUE = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Text</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Text</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link protocolosv2.impl.YesOrNoImpl <em>Yes Or No</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -167,7 +158,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getYesOrNo()
 	 * @generated
 	 */
-	int YES_OR_NO = 3;
+	int YES_OR_NO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -204,7 +195,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getElement()
 	 * @generated
 	 */
-	int ELEMENT = 7;
+	int ELEMENT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -331,7 +322,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getAuxiliaryConduct()
 	 * @generated
 	 */
-	int AUXILIARY_CONDUCT = 4;
+	int AUXILIARY_CONDUCT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -467,7 +458,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 5;
+	int QUESTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -540,7 +531,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getProtocol()
 	 * @generated
 	 */
-	int PROTOCOL = 6;
+	int PROTOCOL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -606,13 +597,31 @@ public interface Protocolosv2Package extends EPackage {
 	int PROTOCOL__CATEGORY = 6;
 
 	/**
+	 * The feature id for the '<em><b>Operation</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROTOCOL__OPERATION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROTOCOL__VARIABLE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Protocol</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL_FEATURE_COUNT = 7;
+	int PROTOCOL_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Protocol</em>' class.
@@ -631,7 +640,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getPrescription()
 	 * @generated
 	 */
-	int PRESCRIPTION = 8;
+	int PRESCRIPTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -767,7 +776,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getDischarge()
 	 * @generated
 	 */
-	int DISCHARGE = 9;
+	int DISCHARGE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -894,7 +903,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getReferral()
 	 * @generated
 	 */
-	int REFERRAL = 10;
+	int REFERRAL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1030,7 +1039,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getTreatment()
 	 * @generated
 	 */
-	int TREATMENT = 11;
+	int TREATMENT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1193,7 +1202,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getInformation()
 	 * @generated
 	 */
-	int INFORMATION = 12;
+	int INFORMATION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1329,7 +1338,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getSequence()
 	 * @generated
 	 */
-	int SEQUENCE = 13;
+	int SEQUENCE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Passo De Entrada</b></em>' reference.
@@ -1404,7 +1413,7 @@ public interface Protocolosv2Package extends EPackage {
 	int SEQUENCE__DESCRIPTION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Operation</b></em>' reference.
+	 * The feature id for the '<em><b>Operation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1431,43 +1440,6 @@ public interface Protocolosv2Package extends EPackage {
 	int SEQUENCE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link protocolosv2.impl.ExpressionImpl <em>Expression</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see protocolosv2.impl.ExpressionImpl
-	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getExpression()
-	 * @generated
-	 */
-	int EXPRESSION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION__VARIABLE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Expression</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link protocolosv2.impl.OperationImpl <em>Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1475,25 +1447,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperation()
 	 * @generated
 	 */
-	int OPERATION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__VARIABLE = EXPRESSION__VARIABLE;
-
-	/**
-	 * The feature id for the '<em><b>Sequence</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION__SEQUENCE = EXPRESSION_FEATURE_COUNT + 0;
+	int OPERATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -1502,7 +1456,16 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
+	int OPERATION__OPERATOR = OPERAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Operand</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__OPERAND = OPERAND_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Operation</em>' class.
@@ -1511,7 +1474,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+	int OPERATION_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Operation</em>' class.
@@ -1520,7 +1483,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int OPERATION_OPERATION_COUNT = OPERAND_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link protocolosv2.impl.CategoryImpl <em>Category</em>}' class.
@@ -1530,7 +1493,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getCategory()
 	 * @generated
 	 */
-	int CATEGORY = 16;
+	int CATEGORY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1576,7 +1539,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getExamination()
 	 * @generated
 	 */
-	int EXAMINATION = 17;
+	int EXAMINATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1658,7 +1621,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getMedication()
 	 * @generated
 	 */
-	int MEDICATION = 18;
+	int MEDICATION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1866,7 +1829,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getProcedure()
 	 * @generated
 	 */
-	int PROCEDURE = 19;
+	int PROCEDURE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1930,7 +1893,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getAdmission()
 	 * @generated
 	 */
-	int ADMISSION = 20;
+	int ADMISSION = 18;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -2003,7 +1966,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 21;
+	int OPERADOR = 20;
 
 	/**
 	 * The meta object id for the '{@link protocolosv2.NewEnum2 <em>New Enum2</em>}' enum.
@@ -2013,7 +1976,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getNewEnum2()
 	 * @generated
 	 */
-	int NEW_ENUM2 = 22;
+	int NEW_ENUM2 = 21;
 
 
 	/**
@@ -2046,27 +2009,6 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNumeric_Value();
-
-	/**
-	 * Returns the meta object for class '{@link protocolosv2.Text <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Text</em>'.
-	 * @see protocolosv2.Text
-	 * @generated
-	 */
-	EClass getText();
-
-	/**
-	 * Returns the meta object for the attribute '{@link protocolosv2.Text#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see protocolosv2.Text#getValue()
-	 * @see #getText()
-	 * @generated
-	 */
-	EAttribute getText_Value();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.YesOrNo <em>Yes Or No</em>}'.
@@ -2261,6 +2203,28 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getProtocol_Category();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link protocolosv2.Protocol#getOperation <em>Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operation</em>'.
+	 * @see protocolosv2.Protocol#getOperation()
+	 * @see #getProtocol()
+	 * @generated
+	 */
+	EReference getProtocol_Operation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link protocolosv2.Protocol#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Variable</em>'.
+	 * @see protocolosv2.Protocol#getVariable()
+	 * @see #getProtocol()
+	 * @generated
+	 */
+	EReference getProtocol_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.Element <em>Element</em>}'.
@@ -2619,36 +2583,15 @@ public interface Protocolosv2Package extends EPackage {
 	EAttribute getSequence_Description();
 
 	/**
-	 * Returns the meta object for the reference '{@link protocolosv2.Sequence#getOperation <em>Operation</em>}'.
+	 * Returns the meta object for the containment reference '{@link protocolosv2.Sequence#getOperation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Operation</em>'.
+	 * @return the meta object for the containment reference '<em>Operation</em>'.
 	 * @see protocolosv2.Sequence#getOperation()
 	 * @see #getSequence()
 	 * @generated
 	 */
 	EReference getSequence_Operation();
-
-	/**
-	 * Returns the meta object for class '{@link protocolosv2.Expression <em>Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Expression</em>'.
-	 * @see protocolosv2.Expression
-	 * @generated
-	 */
-	EClass getExpression();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link protocolosv2.Expression#getVariable <em>Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable</em>'.
-	 * @see protocolosv2.Expression#getVariable()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	EReference getExpression_Variable();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.Operation <em>Operation</em>}'.
@@ -2661,17 +2604,6 @@ public interface Protocolosv2Package extends EPackage {
 	EClass getOperation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link protocolosv2.Operation#getSequence <em>Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sequence</em>'.
-	 * @see protocolosv2.Operation#getSequence()
-	 * @see #getOperation()
-	 * @generated
-	 */
-	EReference getOperation_Sequence();
-
-	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.Operation#getOperator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2681,6 +2613,17 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOperation_Operator();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link protocolosv2.Operation#getOperand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operand</em>'.
+	 * @see protocolosv2.Operation#getOperand()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EReference getOperation_Operand();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.Category <em>Category</em>}'.
@@ -3140,6 +3083,16 @@ public interface Protocolosv2Package extends EPackage {
 	EAttribute getAdmission_Quantity();
 
 	/**
+	 * Returns the meta object for class '{@link protocolosv2.Operand <em>Operand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operand</em>'.
+	 * @see protocolosv2.Operand
+	 * @generated
+	 */
+	EClass getOperand();
+
+	/**
 	 * Returns the meta object for enum '{@link protocolosv2.Operador <em>Operador</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3209,24 +3162,6 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute NUMERIC__VALUE = eINSTANCE.getNumeric_Value();
-
-		/**
-		 * The meta object literal for the '{@link protocolosv2.impl.TextImpl <em>Text</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see protocolosv2.impl.TextImpl
-		 * @see protocolosv2.impl.Protocolosv2PackageImpl#getText()
-		 * @generated
-		 */
-		EClass TEXT = eINSTANCE.getText();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEXT__VALUE = eINSTANCE.getText_Value();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.YesOrNoImpl <em>Yes Or No</em>}' class.
@@ -3379,6 +3314,22 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EReference PROTOCOL__CATEGORY = eINSTANCE.getProtocol_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Operation</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROTOCOL__OPERATION = eINSTANCE.getProtocol_Operation();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROTOCOL__VARIABLE = eINSTANCE.getProtocol_Variable();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.ElementImpl <em>Element</em>}' class.
@@ -3659,30 +3610,12 @@ public interface Protocolosv2Package extends EPackage {
 		EAttribute SEQUENCE__DESCRIPTION = eINSTANCE.getSequence_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Operation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Operation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference SEQUENCE__OPERATION = eINSTANCE.getSequence_Operation();
-
-		/**
-		 * The meta object literal for the '{@link protocolosv2.impl.ExpressionImpl <em>Expression</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see protocolosv2.impl.ExpressionImpl
-		 * @see protocolosv2.impl.Protocolosv2PackageImpl#getExpression()
-		 * @generated
-		 */
-		EClass EXPRESSION = eINSTANCE.getExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXPRESSION__VARIABLE = eINSTANCE.getExpression_Variable();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.OperationImpl <em>Operation</em>}' class.
@@ -3695,20 +3628,20 @@ public interface Protocolosv2Package extends EPackage {
 		EClass OPERATION = eINSTANCE.getOperation();
 
 		/**
-		 * The meta object literal for the '<em><b>Sequence</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OPERATION__SEQUENCE = eINSTANCE.getOperation_Sequence();
-
-		/**
 		 * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute OPERATION__OPERATOR = eINSTANCE.getOperation_Operator();
+
+		/**
+		 * The meta object literal for the '<em><b>Operand</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATION__OPERAND = eINSTANCE.getOperation_Operand();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.CategoryImpl <em>Category</em>}' class.
@@ -4055,6 +3988,16 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute ADMISSION__QUANTITY = eINSTANCE.getAdmission_Quantity();
+
+		/**
+		 * The meta object literal for the '{@link protocolosv2.impl.OperandImpl <em>Operand</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see protocolosv2.impl.OperandImpl
+		 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperand()
+		 * @generated
+		 */
+		EClass OPERAND = eINSTANCE.getOperand();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.Operador <em>Operador</em>}' enum.

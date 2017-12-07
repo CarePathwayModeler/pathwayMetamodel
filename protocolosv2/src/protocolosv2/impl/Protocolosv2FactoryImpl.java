@@ -58,7 +58,6 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case Protocolosv2Package.NUMERIC: return createNumeric();
-			case Protocolosv2Package.TEXT: return createText();
 			case Protocolosv2Package.YES_OR_NO: return createYesOrNo();
 			case Protocolosv2Package.AUXILIARY_CONDUCT: return createAuxiliaryConduct();
 			case Protocolosv2Package.QUESTION: return createQuestion();
@@ -69,7 +68,6 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 			case Protocolosv2Package.TREATMENT: return createTreatment();
 			case Protocolosv2Package.INFORMATION: return createInformation();
 			case Protocolosv2Package.SEQUENCE: return createSequence();
-			case Protocolosv2Package.EXPRESSION: return createExpression();
 			case Protocolosv2Package.OPERATION: return createOperation();
 			case Protocolosv2Package.CATEGORY: return createCategory();
 			case Protocolosv2Package.EXAMINATION: return createExamination();
@@ -123,16 +121,6 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	public Numeric createNumeric() {
 		NumericImpl numeric = new NumericImpl();
 		return numeric;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Text createText() {
-		TextImpl text = new TextImpl();
-		return text;
 	}
 
 	/**
@@ -233,16 +221,6 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	public Sequence createSequence() {
 		SequenceImpl sequence = new SequenceImpl();
 		return sequence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Expression createExpression() {
-		ExpressionImpl expression = new ExpressionImpl();
-		return expression;
 	}
 
 	/**

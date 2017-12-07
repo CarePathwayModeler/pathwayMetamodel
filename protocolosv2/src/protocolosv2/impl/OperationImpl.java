@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import protocolosv2.Operador;
+import protocolosv2.Operand;
 import protocolosv2.Operation;
 import protocolosv2.Protocolosv2Package;
-import protocolosv2.Sequence;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,23 +30,13 @@ import protocolosv2.Sequence;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link protocolosv2.impl.OperationImpl#getSequence <em>Sequence</em>}</li>
  *   <li>{@link protocolosv2.impl.OperationImpl#getOperator <em>Operator</em>}</li>
+ *   <li>{@link protocolosv2.impl.OperationImpl#getOperand <em>Operand</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OperationImpl extends ExpressionImpl implements Operation {
-	/**
-	 * The cached value of the '{@link #getSequence() <em>Sequence</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSequence()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Sequence> sequence;
-
+public class OperationImpl extends OperandImpl implements Operation {
 	/**
 	 * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,6 +58,16 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	protected Operador operator = OPERATOR_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getOperand() <em>Operand</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperand()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Operand> operand;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,18 +84,6 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	protected EClass eStaticClass() {
 		return Protocolosv2Package.Literals.OPERATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Sequence> getSequence() {
-		if (sequence == null) {
-			sequence = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this, Protocolosv2Package.OPERATION__SEQUENCE, Protocolosv2Package.SEQUENCE__OPERATION);
-		}
-		return sequence;
 	}
 
 	/**
@@ -124,14 +112,11 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSequence()).basicAdd(otherEnd, msgs);
+	public EList<Operand> getOperand() {
+		if (operand == null) {
+			operand = new EObjectContainmentEList<Operand>(Operand.class, this, Protocolosv2Package.OPERATION__OPERAND);
 		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+		return operand;
 	}
 
 	/**
@@ -142,8 +127,8 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				return ((InternalEList<?>)getSequence()).basicRemove(otherEnd, msgs);
+			case Protocolosv2Package.OPERATION__OPERAND:
+				return ((InternalEList<?>)getOperand()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -156,10 +141,10 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				return getSequence();
 			case Protocolosv2Package.OPERATION__OPERATOR:
 				return getOperator();
+			case Protocolosv2Package.OPERATION__OPERAND:
+				return getOperand();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,12 +158,12 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				getSequence().clear();
-				getSequence().addAll((Collection<? extends Sequence>)newValue);
-				return;
 			case Protocolosv2Package.OPERATION__OPERATOR:
 				setOperator((Operador)newValue);
+				return;
+			case Protocolosv2Package.OPERATION__OPERAND:
+				getOperand().clear();
+				getOperand().addAll((Collection<? extends Operand>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,11 +177,11 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				getSequence().clear();
-				return;
 			case Protocolosv2Package.OPERATION__OPERATOR:
 				setOperator(OPERATOR_EDEFAULT);
+				return;
+			case Protocolosv2Package.OPERATION__OPERAND:
+				getOperand().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -210,10 +195,10 @@ public class OperationImpl extends ExpressionImpl implements Operation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Protocolosv2Package.OPERATION__SEQUENCE:
-				return sequence != null && !sequence.isEmpty();
 			case Protocolosv2Package.OPERATION__OPERATOR:
 				return operator != OPERATOR_EDEFAULT;
+			case Protocolosv2Package.OPERATION__OPERAND:
+				return operand != null && !operand.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

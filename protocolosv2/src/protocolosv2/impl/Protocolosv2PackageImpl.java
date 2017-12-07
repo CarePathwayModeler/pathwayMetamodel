@@ -16,12 +16,12 @@ import protocolosv2.Category;
 import protocolosv2.Discharge;
 import protocolosv2.Element;
 import protocolosv2.Examination;
-import protocolosv2.Expression;
 import protocolosv2.Information;
 import protocolosv2.Medication;
 import protocolosv2.NewEnum2;
 import protocolosv2.Numeric;
 import protocolosv2.Operador;
+import protocolosv2.Operand;
 import protocolosv2.Operation;
 import protocolosv2.Prescription;
 import protocolosv2.Procedure;
@@ -31,7 +31,6 @@ import protocolosv2.Protocolosv2Package;
 import protocolosv2.Question;
 import protocolosv2.Referral;
 import protocolosv2.Sequence;
-import protocolosv2.Text;
 import protocolosv2.Treatment;
 import protocolosv2.Variable;
 import protocolosv2.YesOrNo;
@@ -56,13 +55,6 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * @generated
 	 */
 	private EClass numericEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass textEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -146,13 +138,6 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass expressionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass operationEClass = null;
 
 	/**
@@ -189,6 +174,13 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * @generated
 	 */
 	private EClass admissionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -290,24 +282,6 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 */
 	public EAttribute getNumeric_Value() {
 		return (EAttribute)numericEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getText() {
-		return textEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getText_Value() {
-		return (EAttribute)textEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -470,6 +444,24 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 */
 	public EReference getProtocol_Category() {
 		return (EReference)protocolEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProtocol_Operation() {
+		return (EReference)protocolEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProtocol_Variable() {
+		return (EReference)protocolEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -783,24 +775,6 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExpression() {
-		return expressionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExpression_Variable() {
-		return (EReference)expressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOperation() {
 		return operationEClass;
 	}
@@ -810,8 +784,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOperation_Sequence() {
-		return (EReference)operationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getOperation_Operator() {
+		return (EAttribute)operationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -819,8 +793,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getOperation_Operator() {
-		return (EAttribute)operationEClass.getEStructuralFeatures().get(1);
+	public EReference getOperation_Operand() {
+		return (EReference)operationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1206,6 +1180,15 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getOperand() {
+		return operandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOperador() {
 		return operadorEEnum;
 	}
@@ -1252,9 +1235,6 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		numericEClass = createEClass(NUMERIC);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
 
-		textEClass = createEClass(TEXT);
-		createEAttribute(textEClass, TEXT__VALUE);
-
 		yesOrNoEClass = createEClass(YES_OR_NO);
 		createEAttribute(yesOrNoEClass, YES_OR_NO__VALUE);
 
@@ -1276,6 +1256,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEReference(protocolEClass, PROTOCOL__ELEMENTO);
 		createEReference(protocolEClass, PROTOCOL__SEQUENCE);
 		createEReference(protocolEClass, PROTOCOL__CATEGORY);
+		createEReference(protocolEClass, PROTOCOL__OPERATION);
+		createEReference(protocolEClass, PROTOCOL__VARIABLE);
 
 		elementEClass = createEClass(ELEMENT);
 		createEAttribute(elementEClass, ELEMENT__ID);
@@ -1318,12 +1300,9 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(sequenceEClass, SEQUENCE__DESCRIPTION);
 		createEReference(sequenceEClass, SEQUENCE__OPERATION);
 
-		expressionEClass = createEClass(EXPRESSION);
-		createEReference(expressionEClass, EXPRESSION__VARIABLE);
-
 		operationEClass = createEClass(OPERATION);
-		createEReference(operationEClass, OPERATION__SEQUENCE);
 		createEAttribute(operationEClass, OPERATION__OPERATOR);
+		createEReference(operationEClass, OPERATION__OPERAND);
 
 		categoryEClass = createEClass(CATEGORY);
 		createEAttribute(categoryEClass, CATEGORY__NAME);
@@ -1372,6 +1351,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(admissionEClass, ADMISSION__CLINICAL_INDICATION);
 		createEAttribute(admissionEClass, ADMISSION__QUANTITY);
 
+		operandEClass = createEClass(OPERAND);
+
 		// Create enums
 		operadorEEnum = createEEnum(OPERADOR);
 		newEnum2EEnum = createEEnum(NEW_ENUM2);
@@ -1405,8 +1386,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		variableEClass.getESuperTypes().add(this.getOperand());
 		numericEClass.getESuperTypes().add(this.getVariable());
-		textEClass.getESuperTypes().add(this.getVariable());
 		yesOrNoEClass.getESuperTypes().add(this.getVariable());
 		auxiliaryConductEClass.getESuperTypes().add(this.getElement());
 		prescriptionEClass.getESuperTypes().add(this.getElement());
@@ -1414,16 +1395,13 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		referralEClass.getESuperTypes().add(this.getElement());
 		treatmentEClass.getESuperTypes().add(this.getElement());
 		informationEClass.getESuperTypes().add(this.getElement());
-		operationEClass.getESuperTypes().add(this.getExpression());
+		operationEClass.getESuperTypes().add(this.getOperand());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(numericEClass, Numeric.class, "Numeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNumeric_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Numeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getText_Value(), ecorePackage.getEString(), "value", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yesOrNoEClass, YesOrNo.class, "YesOrNo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getYesOrNo_Value(), ecorePackage.getEBooleanObject(), "value", null, 0, 1, YesOrNo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1446,6 +1424,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEReference(getProtocol_Elemento(), this.getElement(), null, "elemento", null, 0, -1, Protocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProtocol_Sequence(), this.getSequence(), null, "sequence", null, 0, -1, Protocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProtocol_Category(), this.getCategory(), null, "category", null, 0, -1, Protocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProtocol_Operation(), this.getOperation(), null, "operation", null, 0, -1, Protocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProtocol_Variable(), this.getVariable(), null, "variable", null, 0, -1, Protocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getElement_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1486,14 +1466,11 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getSequence_Url(), ecorePackage.getEString(), "url", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSequence_Name(), ecorePackage.getEString(), "name", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSequence_Description(), ecorePackage.getEString(), "description", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSequence_Operation(), this.getOperation(), this.getOperation_Sequence(), "operation", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExpression_Variable(), this.getVariable(), null, "variable", null, 0, -1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSequence_Operation(), this.getOperation(), null, "operation", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOperation_Sequence(), this.getSequence(), this.getSequence_Operation(), "sequence", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperation_Operator(), this.getOperador(), "Operator", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOperation_Operand(), this.getOperand(), null, "operand", null, 1, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCategory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1541,6 +1518,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getAdmission_Reason(), ecorePackage.getEString(), "reason", null, 0, 1, Admission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAdmission_Clinical_indication(), ecorePackage.getEString(), "clinical_indication", null, 0, 1, Admission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAdmission_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Admission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(operandEClass, Operand.class, "Operand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(operadorEEnum, Operador.class, "Operador");

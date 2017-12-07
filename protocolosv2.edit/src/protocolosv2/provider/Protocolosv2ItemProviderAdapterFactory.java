@@ -95,29 +95,6 @@ public class Protocolosv2ItemProviderAdapterFactory extends Protocolosv2AdapterF
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link protocolosv2.Text} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TextItemProvider textItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link protocolosv2.Text}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTextAdapter() {
-		if (textItemProvider == null) {
-			textItemProvider = new TextItemProvider(this);
-		}
-
-		return textItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link protocolosv2.YesOrNo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -345,29 +322,6 @@ public class Protocolosv2ItemProviderAdapterFactory extends Protocolosv2AdapterF
 		}
 
 		return sequenceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link protocolosv2.Expression} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ExpressionItemProvider expressionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link protocolosv2.Expression}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createExpressionAdapter() {
-		if (expressionItemProvider == null) {
-			expressionItemProvider = new ExpressionItemProvider(this);
-		}
-
-		return expressionItemProvider;
 	}
 
 	/**
@@ -608,7 +562,6 @@ public class Protocolosv2ItemProviderAdapterFactory extends Protocolosv2AdapterF
 	 */
 	public void dispose() {
 		if (numericItemProvider != null) numericItemProvider.dispose();
-		if (textItemProvider != null) textItemProvider.dispose();
 		if (yesOrNoItemProvider != null) yesOrNoItemProvider.dispose();
 		if (auxiliaryConductItemProvider != null) auxiliaryConductItemProvider.dispose();
 		if (questionItemProvider != null) questionItemProvider.dispose();
@@ -619,7 +572,6 @@ public class Protocolosv2ItemProviderAdapterFactory extends Protocolosv2AdapterF
 		if (treatmentItemProvider != null) treatmentItemProvider.dispose();
 		if (informationItemProvider != null) informationItemProvider.dispose();
 		if (sequenceItemProvider != null) sequenceItemProvider.dispose();
-		if (expressionItemProvider != null) expressionItemProvider.dispose();
 		if (operationItemProvider != null) operationItemProvider.dispose();
 		if (categoryItemProvider != null) categoryItemProvider.dispose();
 		if (examinationItemProvider != null) examinationItemProvider.dispose();
