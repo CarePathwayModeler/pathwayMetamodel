@@ -3,9 +3,13 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="protocolosv2" nsURI="http://www.example.org/protocolosv2" nsPrefix="protocolosv2">
   <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//Operand"/>
   <eClassifiers xsi:type="ecore:EClass" name="Numeric" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YesOrNo" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AuxiliaryConduct" eSuperTypes="#//Element">
@@ -162,5 +166,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinical_indication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Operand" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Operand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -26,9 +26,13 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//NewEnum2"/>
     <genClasses image="false" ecoreClass="protocolosv2.ecore#//Variable"/>
     <genClasses ecoreClass="protocolosv2.ecore#//Numeric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/weight"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/value"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//YesOrNo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/weight"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/value"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//AuxiliaryConduct">
@@ -143,6 +147,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/clinical_indication"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/quantity"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Operand"/>
+    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Operand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operand/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
