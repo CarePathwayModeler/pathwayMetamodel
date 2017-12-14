@@ -74,6 +74,7 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 			case Protocolosv2Package.MEDICATION: return createMedication();
 			case Protocolosv2Package.PROCEDURE: return createProcedure();
 			case Protocolosv2Package.ADMISSION: return createAdmission();
+			case Protocolosv2Package.OPERAND: return createOperand();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -281,6 +282,16 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	public Admission createAdmission() {
 		AdmissionImpl admission = new AdmissionImpl();
 		return admission;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operand createOperand() {
+		OperandImpl operand = new OperandImpl();
+		return operand;
 	}
 
 	/**

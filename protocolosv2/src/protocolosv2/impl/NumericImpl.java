@@ -19,12 +19,54 @@ import protocolosv2.Protocolosv2Package;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link protocolosv2.impl.NumericImpl#getId <em>Id</em>}</li>
+ *   <li>{@link protocolosv2.impl.NumericImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link protocolosv2.impl.NumericImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class NumericImpl extends VariableImpl implements Numeric {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int WEIGHT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getWeight() <em>Weight</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected int weight = WEIGHT_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,6 +111,48 @@ public class NumericImpl extends VariableImpl implements Numeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.NUMERIC__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getWeight() {
+		return weight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWeight(int newWeight) {
+		int oldWeight = weight;
+		weight = newWeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.NUMERIC__WEIGHT, oldWeight, weight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Double getValue() {
 		return value;
 	}
@@ -93,6 +177,10 @@ public class NumericImpl extends VariableImpl implements Numeric {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Protocolosv2Package.NUMERIC__ID:
+				return getId();
+			case Protocolosv2Package.NUMERIC__WEIGHT:
+				return getWeight();
 			case Protocolosv2Package.NUMERIC__VALUE:
 				return getValue();
 		}
@@ -107,6 +195,12 @@ public class NumericImpl extends VariableImpl implements Numeric {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Protocolosv2Package.NUMERIC__ID:
+				setId((Integer)newValue);
+				return;
+			case Protocolosv2Package.NUMERIC__WEIGHT:
+				setWeight((Integer)newValue);
+				return;
 			case Protocolosv2Package.NUMERIC__VALUE:
 				setValue((Double)newValue);
 				return;
@@ -122,6 +216,12 @@ public class NumericImpl extends VariableImpl implements Numeric {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Protocolosv2Package.NUMERIC__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case Protocolosv2Package.NUMERIC__WEIGHT:
+				setWeight(WEIGHT_EDEFAULT);
+				return;
 			case Protocolosv2Package.NUMERIC__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -137,6 +237,10 @@ public class NumericImpl extends VariableImpl implements Numeric {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Protocolosv2Package.NUMERIC__ID:
+				return id != ID_EDEFAULT;
+			case Protocolosv2Package.NUMERIC__WEIGHT:
+				return weight != WEIGHT_EDEFAULT;
 			case Protocolosv2Package.NUMERIC__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
@@ -153,7 +257,11 @@ public class NumericImpl extends VariableImpl implements Numeric {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", weight: ");
+		result.append(weight);
+		result.append(", value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

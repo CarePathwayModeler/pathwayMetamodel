@@ -175,6 +175,15 @@ public interface Protocolosv2Factory extends EFactory {
 	Admission createAdmission();
 
 	/**
+	 * Returns a new object of class '<em>Operand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operand</em>'.
+	 * @generated
+	 */
+	Operand createOperand();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

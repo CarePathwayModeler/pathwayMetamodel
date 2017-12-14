@@ -68,13 +68,22 @@ public interface Protocolosv2Package extends EPackage {
 	int OPERAND = 19;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERAND__NAME = 0;
+
+	/**
 	 * The number of structural features of the '<em>Operand</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERAND_FEATURE_COUNT = 0;
+	int OPERAND_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Operand</em>' class.
@@ -94,6 +103,15 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	int VARIABLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__NAME = OPERAND__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -124,13 +142,40 @@ public interface Protocolosv2Package extends EPackage {
 	int NUMERIC = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC__ID = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC__WEIGHT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NUMERIC__VALUE = VARIABLE_FEATURE_COUNT + 0;
+	int NUMERIC__VALUE = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Numeric</em>' class.
@@ -139,7 +184,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMERIC_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int NUMERIC_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Numeric</em>' class.
@@ -161,13 +206,40 @@ public interface Protocolosv2Package extends EPackage {
 	int YES_OR_NO = 2;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO__ID = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO__WEIGHT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int YES_OR_NO__VALUE = VARIABLE_FEATURE_COUNT + 0;
+	int YES_OR_NO__VALUE = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Yes Or No</em>' class.
@@ -176,7 +248,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YES_OR_NO_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int YES_OR_NO_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Yes Or No</em>' class.
@@ -1450,6 +1522,15 @@ public interface Protocolosv2Package extends EPackage {
 	int OPERATION = 13;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__NAME = OPERAND__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2000,6 +2081,28 @@ public interface Protocolosv2Package extends EPackage {
 	EClass getNumeric();
 
 	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.Numeric#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see protocolosv2.Numeric#getId()
+	 * @see #getNumeric()
+	 * @generated
+	 */
+	EAttribute getNumeric_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.Numeric#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see protocolosv2.Numeric#getWeight()
+	 * @see #getNumeric()
+	 * @generated
+	 */
+	EAttribute getNumeric_Weight();
+
+	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.Numeric#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2019,6 +2122,28 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getYesOrNo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.YesOrNo#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see protocolosv2.YesOrNo#getId()
+	 * @see #getYesOrNo()
+	 * @generated
+	 */
+	EAttribute getYesOrNo_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.YesOrNo#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see protocolosv2.YesOrNo#getWeight()
+	 * @see #getYesOrNo()
+	 * @generated
+	 */
+	EAttribute getYesOrNo_Weight();
 
 	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.YesOrNo#getValue <em>Value</em>}'.
@@ -3093,6 +3218,17 @@ public interface Protocolosv2Package extends EPackage {
 	EClass getOperand();
 
 	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.Operand#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see protocolosv2.Operand#getName()
+	 * @see #getOperand()
+	 * @generated
+	 */
+	EAttribute getOperand_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link protocolosv2.Operador <em>Operador</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3156,6 +3292,22 @@ public interface Protocolosv2Package extends EPackage {
 		EClass NUMERIC = eINSTANCE.getNumeric();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMERIC__ID = eINSTANCE.getNumeric_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMERIC__WEIGHT = eINSTANCE.getNumeric_Weight();
+
+		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3172,6 +3324,22 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass YES_OR_NO = eINSTANCE.getYesOrNo();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YES_OR_NO__ID = eINSTANCE.getYesOrNo_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YES_OR_NO__WEIGHT = eINSTANCE.getYesOrNo_Weight();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -3998,6 +4166,14 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EClass OPERAND = eINSTANCE.getOperand();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERAND__NAME = eINSTANCE.getOperand_Name();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.Operador <em>Operador</em>}' enum.

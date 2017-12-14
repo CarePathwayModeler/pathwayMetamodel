@@ -99,6 +99,7 @@
     <genClasses ecoreClass="protocolosv2.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operation/Operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Operation/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operation/id"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Category">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Category/name"/>

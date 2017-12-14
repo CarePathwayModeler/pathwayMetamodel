@@ -280,8 +280,26 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNumeric_Value() {
+	public EAttribute getNumeric_Id() {
 		return (EAttribute)numericEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNumeric_Weight() {
+		return (EAttribute)numericEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNumeric_Value() {
+		return (EAttribute)numericEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -298,8 +316,26 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getYesOrNo_Value() {
+	public EAttribute getYesOrNo_Id() {
 		return (EAttribute)yesOrNoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYesOrNo_Weight() {
+		return (EAttribute)yesOrNoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getYesOrNo_Value() {
+		return (EAttribute)yesOrNoEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1189,6 +1225,15 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getOperand_Name() {
+		return (EAttribute)operandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOperador() {
 		return operadorEEnum;
 	}
@@ -1233,9 +1278,13 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		variableEClass = createEClass(VARIABLE);
 
 		numericEClass = createEClass(NUMERIC);
+		createEAttribute(numericEClass, NUMERIC__ID);
+		createEAttribute(numericEClass, NUMERIC__WEIGHT);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
 
 		yesOrNoEClass = createEClass(YES_OR_NO);
+		createEAttribute(yesOrNoEClass, YES_OR_NO__ID);
+		createEAttribute(yesOrNoEClass, YES_OR_NO__WEIGHT);
 		createEAttribute(yesOrNoEClass, YES_OR_NO__VALUE);
 
 		auxiliaryConductEClass = createEClass(AUXILIARY_CONDUCT);
@@ -1352,6 +1401,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(admissionEClass, ADMISSION__QUANTITY);
 
 		operandEClass = createEClass(OPERAND);
+		createEAttribute(operandEClass, OPERAND__NAME);
 
 		// Create enums
 		operadorEEnum = createEEnum(OPERADOR);
@@ -1401,9 +1451,13 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(numericEClass, Numeric.class, "Numeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNumeric_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Numeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNumeric_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, Numeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNumeric_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Numeric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yesOrNoEClass, YesOrNo.class, "YesOrNo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getYesOrNo_Id(), ecorePackage.getEInt(), "id", null, 0, 1, YesOrNo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getYesOrNo_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, YesOrNo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getYesOrNo_Value(), ecorePackage.getEBooleanObject(), "value", null, 0, 1, YesOrNo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(auxiliaryConductEClass, AuxiliaryConduct.class, "AuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1519,7 +1573,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getAdmission_Clinical_indication(), ecorePackage.getEString(), "clinical_indication", null, 0, 1, Admission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAdmission_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Admission.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(operandEClass, Operand.class, "Operand", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(operandEClass, Operand.class, "Operand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOperand_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(operadorEEnum, Operador.class, "Operador");

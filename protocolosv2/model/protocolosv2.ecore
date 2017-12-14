@@ -116,6 +116,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="#//Operador"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operand" lowerBound="1"
         upperBound="-1" eType="#//Operand" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum2"/>
   <eClassifiers xsi:type="ecore:EClass" name="Category">
