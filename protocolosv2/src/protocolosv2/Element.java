@@ -23,8 +23,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link protocolosv2.Element#getDescription <em>Description</em>}</li>
  *   <li>{@link protocolosv2.Element#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link protocolosv2.Element#isIsTerminal <em>Is Terminal</em>}</li>
- *   <li>{@link protocolosv2.Element#getSequenciasDeChegada <em>Sequencias De Chegada</em>}</li>
- *   <li>{@link protocolosv2.Element#getSequenciasDeSaida <em>Sequencias De Saida</em>}</li>
+ *   <li>{@link protocolosv2.Element#getInputSequences <em>Input Sequences</em>}</li>
+ *   <li>{@link protocolosv2.Element#getOutputSequences <em>Output Sequences</em>}</li>
  *   <li>{@link protocolosv2.Element#isMandatory <em>Mandatory</em>}</li>
  * </ul>
  *
@@ -242,40 +242,40 @@ public interface Element extends EObject {
 	void setIsTerminal(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * Returns the value of the '<em><b>Input Sequences</b></em>' reference list.
 	 * The list contents are of type {@link protocolosv2.Sequence}.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Sequence#getPassoDeEntrada <em>Passo De Entrada</em>}'.
+	 * It is bidirectional and its opposite is '{@link protocolosv2.Sequence#getInputStep <em>Input Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sequencias De Chegada</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Input Sequences</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sequencias De Chegada</em>' reference list.
-	 * @see protocolosv2.Protocolosv2Package#getElement_SequenciasDeChegada()
-	 * @see protocolosv2.Sequence#getPassoDeEntrada
-	 * @model opposite="PassoDeEntrada"
+	 * @return the value of the '<em>Input Sequences</em>' reference list.
+	 * @see protocolosv2.Protocolosv2Package#getElement_InputSequences()
+	 * @see protocolosv2.Sequence#getInputStep
+	 * @model opposite="inputStep"
 	 * @generated
 	 */
-	EList<Sequence> getSequenciasDeChegada();
+	EList<Sequence> getInputSequences();
 
 	/**
-	 * Returns the value of the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * Returns the value of the '<em><b>Output Sequences</b></em>' reference list.
 	 * The list contents are of type {@link protocolosv2.Sequence}.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Sequence#getPassoDeSaida <em>Passo De Saida</em>}'.
+	 * It is bidirectional and its opposite is '{@link protocolosv2.Sequence#getOutputStep <em>Output Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sequencias De Saida</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Output Sequences</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sequencias De Saida</em>' reference list.
-	 * @see protocolosv2.Protocolosv2Package#getElement_SequenciasDeSaida()
-	 * @see protocolosv2.Sequence#getPassoDeSaida
-	 * @model opposite="PassoDeSaida"
+	 * @return the value of the '<em>Output Sequences</em>' reference list.
+	 * @see protocolosv2.Protocolosv2Package#getElement_OutputSequences()
+	 * @see protocolosv2.Sequence#getOutputStep
+	 * @model opposite="outputStep"
 	 * @generated
 	 */
-	EList<Sequence> getSequenciasDeSaida();
+	EList<Sequence> getOutputSequences();
 
 	/**
 	 * Returns the value of the '<em><b>Mandatory</b></em>' attribute.

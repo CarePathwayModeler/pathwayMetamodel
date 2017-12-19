@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link protocolosv2.Sequence#getPassoDeEntrada <em>Passo De Entrada</em>}</li>
- *   <li>{@link protocolosv2.Sequence#getPassoDeSaida <em>Passo De Saida</em>}</li>
+ *   <li>{@link protocolosv2.Sequence#getInputStep <em>Input Step</em>}</li>
+ *   <li>{@link protocolosv2.Sequence#getOutputStep <em>Output Step</em>}</li>
  *   <li>{@link protocolosv2.Sequence#getId <em>Id</em>}</li>
  *   <li>{@link protocolosv2.Sequence#getType <em>Type</em>}</li>
  *   <li>{@link protocolosv2.Sequence#getType_verbose <em>Type verbose</em>}</li>
@@ -30,60 +30,60 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Sequence extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Passo De Entrada</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Element#getSequenciasDeChegada <em>Sequencias De Chegada</em>}'.
+	 * Returns the value of the '<em><b>Input Step</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link protocolosv2.Element#getInputSequences <em>Input Sequences</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Passo De Entrada</em>' reference isn't clear,
+	 * If the meaning of the '<em>Input Step</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Passo De Entrada</em>' reference.
-	 * @see #setPassoDeEntrada(Element)
-	 * @see protocolosv2.Protocolosv2Package#getSequence_PassoDeEntrada()
-	 * @see protocolosv2.Element#getSequenciasDeChegada
-	 * @model opposite="SequenciasDeChegada" required="true"
+	 * @return the value of the '<em>Input Step</em>' reference.
+	 * @see #setInputStep(Element)
+	 * @see protocolosv2.Protocolosv2Package#getSequence_InputStep()
+	 * @see protocolosv2.Element#getInputSequences
+	 * @model opposite="inputSequences" required="true"
 	 * @generated
 	 */
-	Element getPassoDeEntrada();
+	Element getInputStep();
 
 	/**
-	 * Sets the value of the '{@link protocolosv2.Sequence#getPassoDeEntrada <em>Passo De Entrada</em>}' reference.
+	 * Sets the value of the '{@link protocolosv2.Sequence#getInputStep <em>Input Step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Passo De Entrada</em>' reference.
-	 * @see #getPassoDeEntrada()
+	 * @param value the new value of the '<em>Input Step</em>' reference.
+	 * @see #getInputStep()
 	 * @generated
 	 */
-	void setPassoDeEntrada(Element value);
+	void setInputStep(Element value);
 
 	/**
-	 * Returns the value of the '<em><b>Passo De Saida</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Element#getSequenciasDeSaida <em>Sequencias De Saida</em>}'.
+	 * Returns the value of the '<em><b>Output Step</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link protocolosv2.Element#getOutputSequences <em>Output Sequences</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Passo De Saida</em>' reference isn't clear,
+	 * If the meaning of the '<em>Output Step</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Passo De Saida</em>' reference.
-	 * @see #setPassoDeSaida(Element)
-	 * @see protocolosv2.Protocolosv2Package#getSequence_PassoDeSaida()
-	 * @see protocolosv2.Element#getSequenciasDeSaida
-	 * @model opposite="SequenciasDeSaida" required="true"
+	 * @return the value of the '<em>Output Step</em>' reference.
+	 * @see #setOutputStep(Element)
+	 * @see protocolosv2.Protocolosv2Package#getSequence_OutputStep()
+	 * @see protocolosv2.Element#getOutputSequences
+	 * @model opposite="outputSequences" required="true"
 	 * @generated
 	 */
-	Element getPassoDeSaida();
+	Element getOutputStep();
 
 	/**
-	 * Sets the value of the '{@link protocolosv2.Sequence#getPassoDeSaida <em>Passo De Saida</em>}' reference.
+	 * Sets the value of the '{@link protocolosv2.Sequence#getOutputStep <em>Output Step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Passo De Saida</em>' reference.
-	 * @see #getPassoDeSaida()
+	 * @param value the new value of the '<em>Output Step</em>' reference.
+	 * @see #getOutputStep()
 	 * @generated
 	 */
-	void setPassoDeSaida(Element value);
+	void setOutputStep(Element value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

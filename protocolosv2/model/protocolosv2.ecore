@@ -50,10 +50,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInitial" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTerminal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SequenciasDeChegada" upperBound="-1"
-        eType="#//Sequence" eOpposite="#//Sequence/PassoDeEntrada"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SequenciasDeSaida" upperBound="-1"
-        eType="#//Sequence" eOpposite="#//Sequence/PassoDeSaida"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputSequences" upperBound="-1"
+        eType="#//Sequence" eOpposite="#//Sequence/inputStep"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputSequences" upperBound="-1"
+        eType="#//Sequence" eOpposite="#//Sequence/outputStep"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prescription" eSuperTypes="#//Element">
@@ -79,10 +79,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sequence">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="PassoDeEntrada" lowerBound="1"
-        eType="#//Element" eOpposite="#//Element/SequenciasDeChegada"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="PassoDeSaida" lowerBound="1"
-        eType="#//Element" eOpposite="#//Element/SequenciasDeSaida"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputStep" lowerBound="1"
+        eType="#//Element" eOpposite="#//Element/inputSequences"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputStep" lowerBound="1"
+        eType="#//Element" eOpposite="#//Element/outputSequences"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type_verbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

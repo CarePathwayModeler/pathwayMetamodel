@@ -342,22 +342,22 @@ public interface Protocolosv2Package extends EPackage {
 	int ELEMENT__IS_TERMINAL = 7;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__SEQUENCIAS_DE_CHEGADA = 8;
+	int ELEMENT__INPUT_SEQUENCES = 8;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__SEQUENCIAS_DE_SAIDA = 9;
+	int ELEMENT__OUTPUT_SEQUENCES = 9;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -469,22 +469,22 @@ public interface Protocolosv2Package extends EPackage {
 	int AUXILIARY_CONDUCT__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int AUXILIARY_CONDUCT__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int AUXILIARY_CONDUCT__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -787,22 +787,22 @@ public interface Protocolosv2Package extends EPackage {
 	int PRESCRIPTION__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int PRESCRIPTION__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int PRESCRIPTION__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -923,22 +923,22 @@ public interface Protocolosv2Package extends EPackage {
 	int DISCHARGE__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int DISCHARGE__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int DISCHARGE__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -1050,22 +1050,22 @@ public interface Protocolosv2Package extends EPackage {
 	int REFERRAL__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int REFERRAL__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int REFERRAL__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -1186,22 +1186,22 @@ public interface Protocolosv2Package extends EPackage {
 	int TREATMENT__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int TREATMENT__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int TREATMENT__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -1349,22 +1349,22 @@ public interface Protocolosv2Package extends EPackage {
 	int INFORMATION__IS_TERMINAL = ELEMENT__IS_TERMINAL;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Chegada</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__SEQUENCIAS_DE_CHEGADA = ELEMENT__SEQUENCIAS_DE_CHEGADA;
+	int INFORMATION__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
 
 	/**
-	 * The feature id for the '<em><b>Sequencias De Saida</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__SEQUENCIAS_DE_SAIDA = ELEMENT__SEQUENCIAS_DE_SAIDA;
+	int INFORMATION__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -1413,22 +1413,22 @@ public interface Protocolosv2Package extends EPackage {
 	int SEQUENCE = 12;
 
 	/**
-	 * The feature id for the '<em><b>Passo De Entrada</b></em>' reference.
+	 * The feature id for the '<em><b>Input Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEQUENCE__PASSO_DE_ENTRADA = 0;
+	int SEQUENCE__INPUT_STEP = 0;
 
 	/**
-	 * The feature id for the '<em><b>Passo De Saida</b></em>' reference.
+	 * The feature id for the '<em><b>Output Step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEQUENCE__PASSO_DE_SAIDA = 1;
+	int SEQUENCE__OUTPUT_STEP = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1549,13 +1549,22 @@ public interface Protocolosv2Package extends EPackage {
 	int OPERATION__OPERAND = OPERAND_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION__ID = OPERAND_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Operation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATION_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 2;
+	int OPERATION_FEATURE_COUNT = OPERAND_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Operation</em>' class.
@@ -2450,26 +2459,26 @@ public interface Protocolosv2Package extends EPackage {
 	EAttribute getElement_IsTerminal();
 
 	/**
-	 * Returns the meta object for the reference list '{@link protocolosv2.Element#getSequenciasDeChegada <em>Sequencias De Chegada</em>}'.
+	 * Returns the meta object for the reference list '{@link protocolosv2.Element#getInputSequences <em>Input Sequences</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sequencias De Chegada</em>'.
-	 * @see protocolosv2.Element#getSequenciasDeChegada()
+	 * @return the meta object for the reference list '<em>Input Sequences</em>'.
+	 * @see protocolosv2.Element#getInputSequences()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EReference getElement_SequenciasDeChegada();
+	EReference getElement_InputSequences();
 
 	/**
-	 * Returns the meta object for the reference list '{@link protocolosv2.Element#getSequenciasDeSaida <em>Sequencias De Saida</em>}'.
+	 * Returns the meta object for the reference list '{@link protocolosv2.Element#getOutputSequences <em>Output Sequences</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Sequencias De Saida</em>'.
-	 * @see protocolosv2.Element#getSequenciasDeSaida()
+	 * @return the meta object for the reference list '<em>Output Sequences</em>'.
+	 * @see protocolosv2.Element#getOutputSequences()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EReference getElement_SequenciasDeSaida();
+	EReference getElement_OutputSequences();
 
 	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.Element#isMandatory <em>Mandatory</em>}'.
@@ -2620,26 +2629,26 @@ public interface Protocolosv2Package extends EPackage {
 	EClass getSequence();
 
 	/**
-	 * Returns the meta object for the reference '{@link protocolosv2.Sequence#getPassoDeEntrada <em>Passo De Entrada</em>}'.
+	 * Returns the meta object for the reference '{@link protocolosv2.Sequence#getInputStep <em>Input Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Passo De Entrada</em>'.
-	 * @see protocolosv2.Sequence#getPassoDeEntrada()
+	 * @return the meta object for the reference '<em>Input Step</em>'.
+	 * @see protocolosv2.Sequence#getInputStep()
 	 * @see #getSequence()
 	 * @generated
 	 */
-	EReference getSequence_PassoDeEntrada();
+	EReference getSequence_InputStep();
 
 	/**
-	 * Returns the meta object for the reference '{@link protocolosv2.Sequence#getPassoDeSaida <em>Passo De Saida</em>}'.
+	 * Returns the meta object for the reference '{@link protocolosv2.Sequence#getOutputStep <em>Output Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Passo De Saida</em>'.
-	 * @see protocolosv2.Sequence#getPassoDeSaida()
+	 * @return the meta object for the reference '<em>Output Step</em>'.
+	 * @see protocolosv2.Sequence#getOutputStep()
 	 * @see #getSequence()
 	 * @generated
 	 */
-	EReference getSequence_PassoDeSaida();
+	EReference getSequence_OutputStep();
 
 	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.Sequence#getId <em>Id</em>}'.
@@ -2749,6 +2758,17 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EReference getOperation_Operand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link protocolosv2.Operation#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see protocolosv2.Operation#getId()
+	 * @see #getOperation()
+	 * @generated
+	 */
+	EAttribute getOperation_Id();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.Category <em>Category</em>}'.
@@ -3574,20 +3594,20 @@ public interface Protocolosv2Package extends EPackage {
 		EAttribute ELEMENT__IS_TERMINAL = eINSTANCE.getElement_IsTerminal();
 
 		/**
-		 * The meta object literal for the '<em><b>Sequencias De Chegada</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Input Sequences</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT__SEQUENCIAS_DE_CHEGADA = eINSTANCE.getElement_SequenciasDeChegada();
+		EReference ELEMENT__INPUT_SEQUENCES = eINSTANCE.getElement_InputSequences();
 
 		/**
-		 * The meta object literal for the '<em><b>Sequencias De Saida</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Output Sequences</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT__SEQUENCIAS_DE_SAIDA = eINSTANCE.getElement_SequenciasDeSaida();
+		EReference ELEMENT__OUTPUT_SEQUENCES = eINSTANCE.getElement_OutputSequences();
 
 		/**
 		 * The meta object literal for the '<em><b>Mandatory</b></em>' attribute feature.
@@ -3714,20 +3734,20 @@ public interface Protocolosv2Package extends EPackage {
 		EClass SEQUENCE = eINSTANCE.getSequence();
 
 		/**
-		 * The meta object literal for the '<em><b>Passo De Entrada</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Input Step</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEQUENCE__PASSO_DE_ENTRADA = eINSTANCE.getSequence_PassoDeEntrada();
+		EReference SEQUENCE__INPUT_STEP = eINSTANCE.getSequence_InputStep();
 
 		/**
-		 * The meta object literal for the '<em><b>Passo De Saida</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Output Step</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SEQUENCE__PASSO_DE_SAIDA = eINSTANCE.getSequence_PassoDeSaida();
+		EReference SEQUENCE__OUTPUT_STEP = eINSTANCE.getSequence_OutputStep();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -3810,6 +3830,14 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EReference OPERATION__OPERAND = eINSTANCE.getOperation_Operand();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPERATION__ID = eINSTANCE.getOperation_Id();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.CategoryImpl <em>Category</em>}' class.

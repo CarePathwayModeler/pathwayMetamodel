@@ -65,8 +65,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/isInitial"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/isTerminal"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/SequenciasDeChegada"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/SequenciasDeSaida"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/inputSequences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/outputSequences"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/mandatory"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Prescription">
@@ -86,8 +86,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Information/text"/>
     </genClasses>
     <genClasses ecoreClass="protocolosv2.ecore#//Sequence">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/PassoDeEntrada"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/PassoDeSaida"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/inputStep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/outputStep"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/type_verbose"/>

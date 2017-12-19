@@ -586,7 +586,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_SequenciasDeChegada() {
+	public EReference getElement_InputSequences() {
 		return (EReference)elementEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -595,7 +595,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_SequenciasDeSaida() {
+	public EReference getElement_OutputSequences() {
 		return (EReference)elementEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -730,7 +730,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSequence_PassoDeEntrada() {
+	public EReference getSequence_InputStep() {
 		return (EReference)sequenceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -739,7 +739,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSequence_PassoDeSaida() {
+	public EReference getSequence_OutputStep() {
 		return (EReference)sequenceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -831,6 +831,15 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 */
 	public EReference getOperation_Operand() {
 		return (EReference)operationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOperation_Id() {
+		return (EAttribute)operationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1317,8 +1326,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(elementEClass, ELEMENT__DESCRIPTION);
 		createEAttribute(elementEClass, ELEMENT__IS_INITIAL);
 		createEAttribute(elementEClass, ELEMENT__IS_TERMINAL);
-		createEReference(elementEClass, ELEMENT__SEQUENCIAS_DE_CHEGADA);
-		createEReference(elementEClass, ELEMENT__SEQUENCIAS_DE_SAIDA);
+		createEReference(elementEClass, ELEMENT__INPUT_SEQUENCES);
+		createEReference(elementEClass, ELEMENT__OUTPUT_SEQUENCES);
 		createEAttribute(elementEClass, ELEMENT__MANDATORY);
 
 		prescriptionEClass = createEClass(PRESCRIPTION);
@@ -1339,8 +1348,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(informationEClass, INFORMATION__TEXT);
 
 		sequenceEClass = createEClass(SEQUENCE);
-		createEReference(sequenceEClass, SEQUENCE__PASSO_DE_ENTRADA);
-		createEReference(sequenceEClass, SEQUENCE__PASSO_DE_SAIDA);
+		createEReference(sequenceEClass, SEQUENCE__INPUT_STEP);
+		createEReference(sequenceEClass, SEQUENCE__OUTPUT_STEP);
 		createEAttribute(sequenceEClass, SEQUENCE__ID);
 		createEAttribute(sequenceEClass, SEQUENCE__TYPE);
 		createEAttribute(sequenceEClass, SEQUENCE__TYPE_VERBOSE);
@@ -1352,6 +1361,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		operationEClass = createEClass(OPERATION);
 		createEAttribute(operationEClass, OPERATION__OPERATOR);
 		createEReference(operationEClass, OPERATION__OPERAND);
+		createEAttribute(operationEClass, OPERATION__ID);
 
 		categoryEClass = createEClass(CATEGORY);
 		createEAttribute(categoryEClass, CATEGORY__NAME);
@@ -1490,8 +1500,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_IsInitial(), ecorePackage.getEBoolean(), "isInitial", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_IsTerminal(), ecorePackage.getEBoolean(), "isTerminal", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_SequenciasDeChegada(), this.getSequence(), this.getSequence_PassoDeEntrada(), "SequenciasDeChegada", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_SequenciasDeSaida(), this.getSequence(), this.getSequence_PassoDeSaida(), "SequenciasDeSaida", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_InputSequences(), this.getSequence(), this.getSequence_InputStep(), "inputSequences", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_OutputSequences(), this.getSequence(), this.getSequence_OutputStep(), "outputSequences", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_Mandatory(), ecorePackage.getEBoolean(), "mandatory", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescriptionEClass, Prescription.class, "Prescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1512,8 +1522,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getInformation_Text(), ecorePackage.getEString(), "text", null, 0, 1, Information.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sequenceEClass, Sequence.class, "Sequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSequence_PassoDeEntrada(), this.getElement(), this.getElement_SequenciasDeChegada(), "PassoDeEntrada", null, 1, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSequence_PassoDeSaida(), this.getElement(), this.getElement_SequenciasDeSaida(), "PassoDeSaida", null, 1, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSequence_InputStep(), this.getElement(), this.getElement_InputSequences(), "inputStep", null, 1, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSequence_OutputStep(), this.getElement(), this.getElement_OutputSequences(), "outputStep", null, 1, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSequence_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSequence_Type(), ecorePackage.getEString(), "type", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSequence_Type_verbose(), ecorePackage.getEString(), "type_verbose", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1525,6 +1535,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperation_Operator(), this.getOperador(), "Operator", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperation_Operand(), this.getOperand(), null, "operand", null, 1, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperation_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCategory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

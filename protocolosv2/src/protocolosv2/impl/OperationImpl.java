@@ -32,6 +32,7 @@ import protocolosv2.Protocolosv2Package;
  * <ul>
  *   <li>{@link protocolosv2.impl.OperationImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link protocolosv2.impl.OperationImpl#getOperand <em>Operand</em>}</li>
+ *   <li>{@link protocolosv2.impl.OperationImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * @ordered
 	 */
 	protected EList<Operand> operand;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,6 +145,27 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.OPERATION__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -145,6 +187,8 @@ public class OperationImpl extends OperandImpl implements Operation {
 				return getOperator();
 			case Protocolosv2Package.OPERATION__OPERAND:
 				return getOperand();
+			case Protocolosv2Package.OPERATION__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,6 +209,9 @@ public class OperationImpl extends OperandImpl implements Operation {
 				getOperand().clear();
 				getOperand().addAll((Collection<? extends Operand>)newValue);
 				return;
+			case Protocolosv2Package.OPERATION__ID:
+				setId((Integer)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +230,9 @@ public class OperationImpl extends OperandImpl implements Operation {
 			case Protocolosv2Package.OPERATION__OPERAND:
 				getOperand().clear();
 				return;
+			case Protocolosv2Package.OPERATION__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,6 +249,8 @@ public class OperationImpl extends OperandImpl implements Operation {
 				return operator != OPERATOR_EDEFAULT;
 			case Protocolosv2Package.OPERATION__OPERAND:
 				return operand != null && !operand.isEmpty();
+			case Protocolosv2Package.OPERATION__ID:
+				return id != ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +267,8 @@ public class OperationImpl extends OperandImpl implements Operation {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Operator: ");
 		result.append(operator);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

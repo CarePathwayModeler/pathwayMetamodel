@@ -38,8 +38,8 @@ import protocolosv2.Sequence;
  *   <li>{@link protocolosv2.impl.ElementImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link protocolosv2.impl.ElementImpl#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link protocolosv2.impl.ElementImpl#isIsTerminal <em>Is Terminal</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getSequenciasDeChegada <em>Sequencias De Chegada</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getSequenciasDeSaida <em>Sequencias De Saida</em>}</li>
+ *   <li>{@link protocolosv2.impl.ElementImpl#getInputSequences <em>Input Sequences</em>}</li>
+ *   <li>{@link protocolosv2.impl.ElementImpl#getOutputSequences <em>Output Sequences</em>}</li>
  *   <li>{@link protocolosv2.impl.ElementImpl#isMandatory <em>Mandatory</em>}</li>
  * </ul>
  *
@@ -207,24 +207,24 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected boolean isTerminal = IS_TERMINAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSequenciasDeChegada() <em>Sequencias De Chegada</em>}' reference list.
+	 * The cached value of the '{@link #getInputSequences() <em>Input Sequences</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSequenciasDeChegada()
+	 * @see #getInputSequences()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Sequence> sequenciasDeChegada;
+	protected EList<Sequence> inputSequences;
 
 	/**
-	 * The cached value of the '{@link #getSequenciasDeSaida() <em>Sequencias De Saida</em>}' reference list.
+	 * The cached value of the '{@link #getOutputSequences() <em>Output Sequences</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSequenciasDeSaida()
+	 * @see #getOutputSequences()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Sequence> sequenciasDeSaida;
+	protected EList<Sequence> outputSequences;
 
 	/**
 	 * The default value of the '{@link #isMandatory() <em>Mandatory</em>}' attribute.
@@ -438,11 +438,11 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Sequence> getSequenciasDeChegada() {
-		if (sequenciasDeChegada == null) {
-			sequenciasDeChegada = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA, Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA);
+	public EList<Sequence> getInputSequences() {
+		if (inputSequences == null) {
+			inputSequences = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this, Protocolosv2Package.ELEMENT__INPUT_SEQUENCES, Protocolosv2Package.SEQUENCE__INPUT_STEP);
 		}
-		return sequenciasDeChegada;
+		return inputSequences;
 	}
 
 	/**
@@ -450,11 +450,11 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Sequence> getSequenciasDeSaida() {
-		if (sequenciasDeSaida == null) {
-			sequenciasDeSaida = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA, Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA);
+	public EList<Sequence> getOutputSequences() {
+		if (outputSequences == null) {
+			outputSequences = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this, Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES, Protocolosv2Package.SEQUENCE__OUTPUT_STEP);
 		}
-		return sequenciasDeSaida;
+		return outputSequences;
 	}
 
 	/**
@@ -487,10 +487,10 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSequenciasDeChegada()).basicAdd(otherEnd, msgs);
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSequenciasDeSaida()).basicAdd(otherEnd, msgs);
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInputSequences()).basicAdd(otherEnd, msgs);
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOutputSequences()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -503,10 +503,10 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				return ((InternalEList<?>)getSequenciasDeChegada()).basicRemove(otherEnd, msgs);
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				return ((InternalEList<?>)getSequenciasDeSaida()).basicRemove(otherEnd, msgs);
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				return ((InternalEList<?>)getInputSequences()).basicRemove(otherEnd, msgs);
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				return ((InternalEList<?>)getOutputSequences()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -535,10 +535,10 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 				return isIsInitial();
 			case Protocolosv2Package.ELEMENT__IS_TERMINAL:
 				return isIsTerminal();
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				return getSequenciasDeChegada();
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				return getSequenciasDeSaida();
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				return getInputSequences();
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				return getOutputSequences();
 			case Protocolosv2Package.ELEMENT__MANDATORY:
 				return isMandatory();
 		}
@@ -578,13 +578,13 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			case Protocolosv2Package.ELEMENT__IS_TERMINAL:
 				setIsTerminal((Boolean)newValue);
 				return;
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				getSequenciasDeChegada().clear();
-				getSequenciasDeChegada().addAll((Collection<? extends Sequence>)newValue);
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				getInputSequences().clear();
+				getInputSequences().addAll((Collection<? extends Sequence>)newValue);
 				return;
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				getSequenciasDeSaida().clear();
-				getSequenciasDeSaida().addAll((Collection<? extends Sequence>)newValue);
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				getOutputSequences().clear();
+				getOutputSequences().addAll((Collection<? extends Sequence>)newValue);
 				return;
 			case Protocolosv2Package.ELEMENT__MANDATORY:
 				setMandatory((Boolean)newValue);
@@ -625,11 +625,11 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			case Protocolosv2Package.ELEMENT__IS_TERMINAL:
 				setIsTerminal(IS_TERMINAL_EDEFAULT);
 				return;
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				getSequenciasDeChegada().clear();
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				getInputSequences().clear();
 				return;
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				getSequenciasDeSaida().clear();
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				getOutputSequences().clear();
 				return;
 			case Protocolosv2Package.ELEMENT__MANDATORY:
 				setMandatory(MANDATORY_EDEFAULT);
@@ -662,10 +662,10 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 				return isInitial != IS_INITIAL_EDEFAULT;
 			case Protocolosv2Package.ELEMENT__IS_TERMINAL:
 				return isTerminal != IS_TERMINAL_EDEFAULT;
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA:
-				return sequenciasDeChegada != null && !sequenciasDeChegada.isEmpty();
-			case Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA:
-				return sequenciasDeSaida != null && !sequenciasDeSaida.isEmpty();
+			case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
+				return inputSequences != null && !inputSequences.isEmpty();
+			case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
+				return outputSequences != null && !outputSequences.isEmpty();
 			case Protocolosv2Package.ELEMENT__MANDATORY:
 				return mandatory != MANDATORY_EDEFAULT;
 		}

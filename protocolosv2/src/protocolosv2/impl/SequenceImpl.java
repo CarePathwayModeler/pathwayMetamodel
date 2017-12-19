@@ -24,8 +24,8 @@ import protocolosv2.Sequence;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link protocolosv2.impl.SequenceImpl#getPassoDeEntrada <em>Passo De Entrada</em>}</li>
- *   <li>{@link protocolosv2.impl.SequenceImpl#getPassoDeSaida <em>Passo De Saida</em>}</li>
+ *   <li>{@link protocolosv2.impl.SequenceImpl#getInputStep <em>Input Step</em>}</li>
+ *   <li>{@link protocolosv2.impl.SequenceImpl#getOutputStep <em>Output Step</em>}</li>
  *   <li>{@link protocolosv2.impl.SequenceImpl#getId <em>Id</em>}</li>
  *   <li>{@link protocolosv2.impl.SequenceImpl#getType <em>Type</em>}</li>
  *   <li>{@link protocolosv2.impl.SequenceImpl#getType_verbose <em>Type verbose</em>}</li>
@@ -39,24 +39,24 @@ import protocolosv2.Sequence;
  */
 public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequence {
 	/**
-	 * The cached value of the '{@link #getPassoDeEntrada() <em>Passo De Entrada</em>}' reference.
+	 * The cached value of the '{@link #getInputStep() <em>Input Step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPassoDeEntrada()
+	 * @see #getInputStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected Element passoDeEntrada;
+	protected Element inputStep;
 
 	/**
-	 * The cached value of the '{@link #getPassoDeSaida() <em>Passo De Saida</em>}' reference.
+	 * The cached value of the '{@link #getOutputStep() <em>Output Step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPassoDeSaida()
+	 * @see #getOutputStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected Element passoDeSaida;
+	protected Element outputStep;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -212,16 +212,16 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element getPassoDeEntrada() {
-		if (passoDeEntrada != null && passoDeEntrada.eIsProxy()) {
-			InternalEObject oldPassoDeEntrada = (InternalEObject)passoDeEntrada;
-			passoDeEntrada = (Element)eResolveProxy(oldPassoDeEntrada);
-			if (passoDeEntrada != oldPassoDeEntrada) {
+	public Element getInputStep() {
+		if (inputStep != null && inputStep.eIsProxy()) {
+			InternalEObject oldInputStep = (InternalEObject)inputStep;
+			inputStep = (Element)eResolveProxy(oldInputStep);
+			if (inputStep != oldInputStep) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA, oldPassoDeEntrada, passoDeEntrada));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Protocolosv2Package.SEQUENCE__INPUT_STEP, oldInputStep, inputStep));
 			}
 		}
-		return passoDeEntrada;
+		return inputStep;
 	}
 
 	/**
@@ -229,8 +229,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetPassoDeEntrada() {
-		return passoDeEntrada;
+	public Element basicGetInputStep() {
+		return inputStep;
 	}
 
 	/**
@@ -238,11 +238,11 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPassoDeEntrada(Element newPassoDeEntrada, NotificationChain msgs) {
-		Element oldPassoDeEntrada = passoDeEntrada;
-		passoDeEntrada = newPassoDeEntrada;
+	public NotificationChain basicSetInputStep(Element newInputStep, NotificationChain msgs) {
+		Element oldInputStep = inputStep;
+		inputStep = newInputStep;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA, oldPassoDeEntrada, newPassoDeEntrada);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__INPUT_STEP, oldInputStep, newInputStep);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -253,18 +253,18 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPassoDeEntrada(Element newPassoDeEntrada) {
-		if (newPassoDeEntrada != passoDeEntrada) {
+	public void setInputStep(Element newInputStep) {
+		if (newInputStep != inputStep) {
 			NotificationChain msgs = null;
-			if (passoDeEntrada != null)
-				msgs = ((InternalEObject)passoDeEntrada).eInverseRemove(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA, Element.class, msgs);
-			if (newPassoDeEntrada != null)
-				msgs = ((InternalEObject)newPassoDeEntrada).eInverseAdd(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA, Element.class, msgs);
-			msgs = basicSetPassoDeEntrada(newPassoDeEntrada, msgs);
+			if (inputStep != null)
+				msgs = ((InternalEObject)inputStep).eInverseRemove(this, Protocolosv2Package.ELEMENT__INPUT_SEQUENCES, Element.class, msgs);
+			if (newInputStep != null)
+				msgs = ((InternalEObject)newInputStep).eInverseAdd(this, Protocolosv2Package.ELEMENT__INPUT_SEQUENCES, Element.class, msgs);
+			msgs = basicSetInputStep(newInputStep, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA, newPassoDeEntrada, newPassoDeEntrada));
+			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__INPUT_STEP, newInputStep, newInputStep));
 	}
 
 	/**
@@ -272,16 +272,16 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element getPassoDeSaida() {
-		if (passoDeSaida != null && passoDeSaida.eIsProxy()) {
-			InternalEObject oldPassoDeSaida = (InternalEObject)passoDeSaida;
-			passoDeSaida = (Element)eResolveProxy(oldPassoDeSaida);
-			if (passoDeSaida != oldPassoDeSaida) {
+	public Element getOutputStep() {
+		if (outputStep != null && outputStep.eIsProxy()) {
+			InternalEObject oldOutputStep = (InternalEObject)outputStep;
+			outputStep = (Element)eResolveProxy(oldOutputStep);
+			if (outputStep != oldOutputStep) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA, oldPassoDeSaida, passoDeSaida));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Protocolosv2Package.SEQUENCE__OUTPUT_STEP, oldOutputStep, outputStep));
 			}
 		}
-		return passoDeSaida;
+		return outputStep;
 	}
 
 	/**
@@ -289,8 +289,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element basicGetPassoDeSaida() {
-		return passoDeSaida;
+	public Element basicGetOutputStep() {
+		return outputStep;
 	}
 
 	/**
@@ -298,11 +298,11 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPassoDeSaida(Element newPassoDeSaida, NotificationChain msgs) {
-		Element oldPassoDeSaida = passoDeSaida;
-		passoDeSaida = newPassoDeSaida;
+	public NotificationChain basicSetOutputStep(Element newOutputStep, NotificationChain msgs) {
+		Element oldOutputStep = outputStep;
+		outputStep = newOutputStep;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA, oldPassoDeSaida, newPassoDeSaida);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__OUTPUT_STEP, oldOutputStep, newOutputStep);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -313,18 +313,18 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPassoDeSaida(Element newPassoDeSaida) {
-		if (newPassoDeSaida != passoDeSaida) {
+	public void setOutputStep(Element newOutputStep) {
+		if (newOutputStep != outputStep) {
 			NotificationChain msgs = null;
-			if (passoDeSaida != null)
-				msgs = ((InternalEObject)passoDeSaida).eInverseRemove(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA, Element.class, msgs);
-			if (newPassoDeSaida != null)
-				msgs = ((InternalEObject)newPassoDeSaida).eInverseAdd(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA, Element.class, msgs);
-			msgs = basicSetPassoDeSaida(newPassoDeSaida, msgs);
+			if (outputStep != null)
+				msgs = ((InternalEObject)outputStep).eInverseRemove(this, Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES, Element.class, msgs);
+			if (newOutputStep != null)
+				msgs = ((InternalEObject)newOutputStep).eInverseAdd(this, Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES, Element.class, msgs);
+			msgs = basicSetOutputStep(newOutputStep, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA, newPassoDeSaida, newPassoDeSaida));
+			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.SEQUENCE__OUTPUT_STEP, newOutputStep, newOutputStep));
 	}
 
 	/**
@@ -504,14 +504,14 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				if (passoDeEntrada != null)
-					msgs = ((InternalEObject)passoDeEntrada).eInverseRemove(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_CHEGADA, Element.class, msgs);
-				return basicSetPassoDeEntrada((Element)otherEnd, msgs);
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				if (passoDeSaida != null)
-					msgs = ((InternalEObject)passoDeSaida).eInverseRemove(this, Protocolosv2Package.ELEMENT__SEQUENCIAS_DE_SAIDA, Element.class, msgs);
-				return basicSetPassoDeSaida((Element)otherEnd, msgs);
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				if (inputStep != null)
+					msgs = ((InternalEObject)inputStep).eInverseRemove(this, Protocolosv2Package.ELEMENT__INPUT_SEQUENCES, Element.class, msgs);
+				return basicSetInputStep((Element)otherEnd, msgs);
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				if (outputStep != null)
+					msgs = ((InternalEObject)outputStep).eInverseRemove(this, Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES, Element.class, msgs);
+				return basicSetOutputStep((Element)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -524,10 +524,10 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				return basicSetPassoDeEntrada(null, msgs);
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				return basicSetPassoDeSaida(null, msgs);
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				return basicSetInputStep(null, msgs);
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				return basicSetOutputStep(null, msgs);
 			case Protocolosv2Package.SEQUENCE__OPERATION:
 				return basicSetOperation(null, msgs);
 		}
@@ -542,12 +542,12 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				if (resolve) return getPassoDeEntrada();
-				return basicGetPassoDeEntrada();
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				if (resolve) return getPassoDeSaida();
-				return basicGetPassoDeSaida();
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				if (resolve) return getInputStep();
+				return basicGetInputStep();
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				if (resolve) return getOutputStep();
+				return basicGetOutputStep();
 			case Protocolosv2Package.SEQUENCE__ID:
 				return getId();
 			case Protocolosv2Package.SEQUENCE__TYPE:
@@ -574,11 +574,11 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				setPassoDeEntrada((Element)newValue);
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				setInputStep((Element)newValue);
 				return;
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				setPassoDeSaida((Element)newValue);
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				setOutputStep((Element)newValue);
 				return;
 			case Protocolosv2Package.SEQUENCE__ID:
 				setId((Integer)newValue);
@@ -613,11 +613,11 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				setPassoDeEntrada((Element)null);
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				setInputStep((Element)null);
 				return;
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				setPassoDeSaida((Element)null);
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				setOutputStep((Element)null);
 				return;
 			case Protocolosv2Package.SEQUENCE__ID:
 				setId(ID_EDEFAULT);
@@ -652,10 +652,10 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_ENTRADA:
-				return passoDeEntrada != null;
-			case Protocolosv2Package.SEQUENCE__PASSO_DE_SAIDA:
-				return passoDeSaida != null;
+			case Protocolosv2Package.SEQUENCE__INPUT_STEP:
+				return inputStep != null;
+			case Protocolosv2Package.SEQUENCE__OUTPUT_STEP:
+				return outputStep != null;
 			case Protocolosv2Package.SEQUENCE__ID:
 				return id != ID_EDEFAULT;
 			case Protocolosv2Package.SEQUENCE__TYPE:

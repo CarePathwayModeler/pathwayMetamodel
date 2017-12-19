@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link protocolosv2.Operation#getOperator <em>Operator</em>}</li>
  *   <li>{@link protocolosv2.Operation#getOperand <em>Operand</em>}</li>
+ *   <li>{@link protocolosv2.Operation#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see protocolosv2.Protocolosv2Package#getOperation()
@@ -66,5 +67,31 @@ public interface Operation extends Operand {
 	 * @generated
 	 */
 	EList<Operand> getOperand();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(int)
+	 * @see protocolosv2.Protocolosv2Package#getOperation_Id()
+	 * @model
+	 * @generated
+	 */
+	int getId();
+
+	/**
+	 * Sets the value of the '{@link protocolosv2.Operation#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(int value);
 
 } // Operation
