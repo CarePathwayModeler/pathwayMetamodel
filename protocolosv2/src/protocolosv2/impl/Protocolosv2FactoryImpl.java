@@ -88,8 +88,8 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case Protocolosv2Package.OPERADOR:
-				return createOperadorFromString(eDataType, initialValue);
+			case Protocolosv2Package.OPERATOR:
+				return createOperatorFromString(eDataType, initialValue);
 			case Protocolosv2Package.NEW_ENUM2:
 				return createNewEnum2FromString(eDataType, initialValue);
 			default:
@@ -105,8 +105,8 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case Protocolosv2Package.OPERADOR:
-				return convertOperadorToString(eDataType, instanceValue);
+			case Protocolosv2Package.OPERATOR:
+				return convertOperatorToString(eDataType, instanceValue);
 			case Protocolosv2Package.NEW_ENUM2:
 				return convertNewEnum2ToString(eDataType, instanceValue);
 			default:
@@ -299,8 +299,8 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Operador createOperadorFromString(EDataType eDataType, String initialValue) {
-		Operador result = Operador.get(initialValue);
+	public Operator createOperatorFromString(EDataType eDataType, String initialValue) {
+		Operator result = Operator.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -310,7 +310,7 @@ public class Protocolosv2FactoryImpl extends EFactoryImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertOperadorToString(EDataType eDataType, Object instanceValue) {
+	public String convertOperatorToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

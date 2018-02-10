@@ -20,9 +20,9 @@ import protocolosv2.Information;
 import protocolosv2.Medication;
 import protocolosv2.NewEnum2;
 import protocolosv2.Numeric;
-import protocolosv2.Operador;
 import protocolosv2.Operand;
 import protocolosv2.Operation;
+import protocolosv2.Operator;
 import protocolosv2.Prescription;
 import protocolosv2.Procedure;
 import protocolosv2.Protocol;
@@ -187,7 +187,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum operadorEEnum = null;
+	private EEnum operatorEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1243,8 +1243,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getOperador() {
-		return operadorEEnum;
+	public EEnum getOperator() {
+		return operatorEEnum;
 	}
 
 	/**
@@ -1414,7 +1414,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		createEAttribute(operandEClass, OPERAND__NAME);
 
 		// Create enums
-		operadorEEnum = createEEnum(OPERADOR);
+		operatorEEnum = createEEnum(OPERATOR);
 		newEnum2EEnum = createEEnum(NEW_ENUM2);
 	}
 
@@ -1533,7 +1533,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEReference(getSequence_Operation(), this.getOperation(), null, "operation", null, 0, 1, Sequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getOperation_Operator(), this.getOperador(), "Operator", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOperation_Operator(), this.getOperator(), "Operator", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOperation_Operand(), this.getOperand(), null, "operand", null, 1, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperation_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1588,22 +1588,22 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 		initEAttribute(getOperand_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(operadorEEnum, Operador.class, "Operador");
-		addEEnumLiteral(operadorEEnum, Operador.NOT);
-		addEEnumLiteral(operadorEEnum, Operador.AND);
-		addEEnumLiteral(operadorEEnum, Operador.OR);
-		addEEnumLiteral(operadorEEnum, Operador.IMPLIES);
-		addEEnumLiteral(operadorEEnum, Operador.EQUAL);
-		addEEnumLiteral(operadorEEnum, Operador.BIGGER_THAN);
-		addEEnumLiteral(operadorEEnum, Operador.SMALLER_THAN);
-		addEEnumLiteral(operadorEEnum, Operador.EQUAL_OR_GREATER);
-		addEEnumLiteral(operadorEEnum, Operador.EQUAL_OR_SMALLER);
-		addEEnumLiteral(operadorEEnum, Operador.XOR);
-		addEEnumLiteral(operadorEEnum, Operador.SUM);
-		addEEnumLiteral(operadorEEnum, Operador.MINUS);
-		addEEnumLiteral(operadorEEnum, Operador.MULTIPLICATION);
-		addEEnumLiteral(operadorEEnum, Operador.DIVISION);
-		addEEnumLiteral(operadorEEnum, Operador.AFFIRMATION);
+		initEEnum(operatorEEnum, Operator.class, "Operator");
+		addEEnumLiteral(operatorEEnum, Operator.NOT);
+		addEEnumLiteral(operatorEEnum, Operator.AND);
+		addEEnumLiteral(operatorEEnum, Operator.OR);
+		addEEnumLiteral(operatorEEnum, Operator.IMPLIES);
+		addEEnumLiteral(operatorEEnum, Operator.EQUAL);
+		addEEnumLiteral(operatorEEnum, Operator.BIGGER_THAN);
+		addEEnumLiteral(operatorEEnum, Operator.SMALLER_THAN);
+		addEEnumLiteral(operatorEEnum, Operator.EQUAL_OR_GREATER);
+		addEEnumLiteral(operatorEEnum, Operator.EQUAL_OR_SMALLER);
+		addEEnumLiteral(operatorEEnum, Operator.XOR);
+		addEEnumLiteral(operatorEEnum, Operator.SUM);
+		addEEnumLiteral(operatorEEnum, Operator.MINUS);
+		addEEnumLiteral(operatorEEnum, Operator.MULTIPLICATION);
+		addEEnumLiteral(operatorEEnum, Operator.DIVISION);
+		addEEnumLiteral(operatorEEnum, Operator.AFFIRMATION);
 
 		initEEnum(newEnum2EEnum, NewEnum2.class, "NewEnum2");
 
@@ -1624,7 +1624,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
 		addAnnotation
-		  (operadorEEnum, 
+		  (operatorEEnum, 
 		   source, 
 		   new String[] {
 			 "pattern", ""

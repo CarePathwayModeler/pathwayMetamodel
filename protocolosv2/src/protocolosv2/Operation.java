@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Operation extends Operand {
 	/**
 	 * Returns the value of the '<em><b>Operator</b></em>' attribute.
-	 * The literals are from the enumeration {@link protocolosv2.Operador}.
+	 * The literals are from the enumeration {@link protocolosv2.Operator}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operator</em>' attribute isn't clear,
@@ -33,24 +33,24 @@ public interface Operation extends Operand {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operator</em>' attribute.
-	 * @see protocolosv2.Operador
-	 * @see #setOperator(Operador)
+	 * @see protocolosv2.Operator
+	 * @see #setOperator(Operator)
 	 * @see protocolosv2.Protocolosv2Package#getOperation_Operator()
 	 * @model
 	 * @generated
 	 */
-	Operador getOperator();
+	Operator getOperator();
 
 	/**
 	 * Sets the value of the '{@link protocolosv2.Operation#getOperator <em>Operator</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Operator</em>' attribute.
-	 * @see protocolosv2.Operador
+	 * @see protocolosv2.Operator
 	 * @see #getOperator()
 	 * @generated
 	 */
-	void setOperator(Operador value);
+	void setOperator(Operator value);
 
 	/**
 	 * Returns the value of the '<em><b>Operand</b></em>' containment reference list.

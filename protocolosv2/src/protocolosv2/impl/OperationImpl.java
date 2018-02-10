@@ -16,10 +16,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import protocolosv2.Operador;
 import protocolosv2.Operand;
 import protocolosv2.Operation;
+import protocolosv2.Operator;
 import protocolosv2.Protocolosv2Package;
 
 /**
@@ -46,7 +45,7 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Operador OPERATOR_EDEFAULT = Operador.NOT;
+	protected static final Operator OPERATOR_EDEFAULT = Operator.NOT;
 
 	/**
 	 * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -56,7 +55,7 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * @generated
 	 * @ordered
 	 */
-	protected Operador operator = OPERATOR_EDEFAULT;
+	protected Operator operator = OPERATOR_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getOperand() <em>Operand</em>}' containment reference list.
@@ -112,7 +111,7 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Operador getOperator() {
+	public Operator getOperator() {
 		return operator;
 	}
 
@@ -121,8 +120,8 @@ public class OperationImpl extends OperandImpl implements Operation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperator(Operador newOperator) {
-		Operador oldOperator = operator;
+	public void setOperator(Operator newOperator) {
+		Operator oldOperator = operator;
 		operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.OPERATION__OPERATOR, oldOperator, operator));
@@ -203,7 +202,7 @@ public class OperationImpl extends OperandImpl implements Operation {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Protocolosv2Package.OPERATION__OPERATOR:
-				setOperator((Operador)newValue);
+				setOperator((Operator)newValue);
 				return;
 			case Protocolosv2Package.OPERATION__OPERAND:
 				getOperand().clear();

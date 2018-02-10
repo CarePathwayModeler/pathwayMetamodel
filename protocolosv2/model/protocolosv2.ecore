@@ -92,7 +92,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="operation" eType="#//Operation"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Operador">
+  <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="pattern" value=""/>
     </eAnnotations>
@@ -113,7 +113,7 @@
     <eLiterals name="affirmation" value="14"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//Operand">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="#//Operador"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Operator" eType="#//Operator"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="operand" lowerBound="1"
         upperBound="-1" eType="#//Operand" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

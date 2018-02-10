@@ -6,22 +6,22 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>protocolosv2.ecore</foreignModel>
   <genPackages prefix="Protocolosv2" disposableProviderFactory="true" ecorePackage="protocolosv2.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//Operador">
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/not"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/and"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/or"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/implies"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/equal"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/biggerThan"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/smallerThan"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/equalOrGreater"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/equalOrSmaller"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/xor"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/sum"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/minus"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/multiplication"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/division"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operador/affirmation"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/not"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/and"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/or"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/implies"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/biggerThan"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/smallerThan"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equalOrGreater"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equalOrSmaller"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/xor"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/sum"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/minus"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/multiplication"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/division"/>
+      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/affirmation"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//NewEnum2"/>
     <genClasses image="false" ecoreClass="protocolosv2.ecore#//Variable"/>

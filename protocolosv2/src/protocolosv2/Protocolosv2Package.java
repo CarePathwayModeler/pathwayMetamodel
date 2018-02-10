@@ -2049,14 +2049,14 @@ public interface Protocolosv2Package extends EPackage {
 	int ADMISSION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link protocolosv2.Operador <em>Operador</em>}' enum.
+	 * The meta object id for the '{@link protocolosv2.Operator <em>Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see protocolosv2.Operador
-	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperador()
+	 * @see protocolosv2.Operator
+	 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperator()
 	 * @generated
 	 */
-	int OPERADOR = 20;
+	int OPERATOR = 20;
 
 	/**
 	 * The meta object id for the '{@link protocolosv2.NewEnum2 <em>New Enum2</em>}' enum.
@@ -3249,14 +3249,14 @@ public interface Protocolosv2Package extends EPackage {
 	EAttribute getOperand_Name();
 
 	/**
-	 * Returns the meta object for enum '{@link protocolosv2.Operador <em>Operador</em>}'.
+	 * Returns the meta object for enum '{@link protocolosv2.Operator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Operador</em>'.
-	 * @see protocolosv2.Operador
+	 * @return the meta object for enum '<em>Operator</em>'.
+	 * @see protocolosv2.Operator
 	 * @generated
 	 */
-	EEnum getOperador();
+	EEnum getOperator();
 
 	/**
 	 * Returns the meta object for enum '{@link protocolosv2.NewEnum2 <em>New Enum2</em>}'.
@@ -4204,14 +4204,14 @@ public interface Protocolosv2Package extends EPackage {
 		EAttribute OPERAND__NAME = eINSTANCE.getOperand_Name();
 
 		/**
-		 * The meta object literal for the '{@link protocolosv2.Operador <em>Operador</em>}' enum.
+		 * The meta object literal for the '{@link protocolosv2.Operator <em>Operator</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see protocolosv2.Operador
-		 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperador()
+		 * @see protocolosv2.Operator
+		 * @see protocolosv2.impl.Protocolosv2PackageImpl#getOperator()
 		 * @generated
 		 */
-		EEnum OPERADOR = eINSTANCE.getOperador();
+		EEnum OPERATOR = eINSTANCE.getOperator();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.NewEnum2 <em>New Enum2</em>}' enum.
