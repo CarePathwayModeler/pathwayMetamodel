@@ -1,6 +1,6 @@
-# Protocol Metamodel
+# Pathway Metamodel
 
-A metamodel that has a medical protocol
+A metamodel that has a medical pathway
 
 ### Requisites
 
