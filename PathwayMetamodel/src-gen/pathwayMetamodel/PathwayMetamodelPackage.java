@@ -2049,6 +2049,142 @@ public interface PathwayMetamodelPackage extends EPackage {
 	int PROCEDURE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.ActionImpl <em>Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.ActionImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getAction()
+	 * @generated
+	 */
+	int ACTION = 20;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__TYPE = ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__TYPE_VERBOSE = ELEMENT__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__URL = ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__DESCRIPTION = ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Initial</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__IS_INITIAL = ELEMENT__IS_INITIAL;
+
+	/**
+	 * The feature id for the '<em><b>Is Terminal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__IS_TERMINAL = ELEMENT__IS_TERMINAL;
+
+	/**
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__MANDATORY = ELEMENT__MANDATORY;
+
+	/**
+	 * The feature id for the '<em><b>Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__SERVICE = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link pathwayMetamodel.Operator <em>Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2056,7 +2192,7 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getOperator()
 	 * @generated
 	 */
-	int OPERATOR = 20;
+	int OPERATOR = 21;
 
 	/**
 	 * Returns the meta object for class '{@link pathwayMetamodel.Operation <em>Operation</em>}'.
@@ -3238,6 +3374,27 @@ public interface PathwayMetamodelPackage extends EPackage {
 	EAttribute getProcedure_Quantity();
 
 	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Action <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Action</em>'.
+	 * @see pathwayMetamodel.Action
+	 * @generated
+	 */
+	EClass getAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Action#getService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Service</em>'.
+	 * @see pathwayMetamodel.Action#getService()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Service();
+
+	/**
 	 * Returns the meta object for enum '{@link pathwayMetamodel.Operator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4181,6 +4338,24 @@ public interface PathwayMetamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROCEDURE__QUANTITY = eINSTANCE.getProcedure_Quantity();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.ActionImpl <em>Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.ActionImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getAction()
+		 * @generated
+		 */
+		EClass ACTION = eINSTANCE.getAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__SERVICE = eINSTANCE.getAction_Service();
 
 		/**
 		 * The meta object literal for the '{@link pathwayMetamodel.Operator <em>Operator</em>}' enum.

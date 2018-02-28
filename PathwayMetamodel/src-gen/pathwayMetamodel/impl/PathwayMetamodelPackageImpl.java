@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import pathwayMetamodel.Action;
 import pathwayMetamodel.Admission;
 import pathwayMetamodel.AuxiliaryConduct;
 import pathwayMetamodel.Category;
@@ -180,6 +181,13 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * @generated
 	 */
 	private EClass procedureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass actionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1237,6 +1245,24 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAction() {
+		return actionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Service() {
+		return (EAttribute) actionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOperator() {
 		return operatorEEnum;
 	}
@@ -1399,6 +1425,9 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		createEAttribute(procedureEClass, PROCEDURE__FREQUENCY);
 		createEAttribute(procedureEClass, PROCEDURE__QUANTITY);
 
+		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__SERVICE);
+
 		// Create enums
 		operatorEEnum = createEEnum(OPERATOR);
 	}
@@ -1442,6 +1471,7 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		treatmentEClass.getESuperTypes().add(this.getElement());
 		prescriptionEClass.getESuperTypes().add(this.getElement());
 		informationEClass.getESuperTypes().add(this.getElement());
+		actionEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1708,6 +1738,10 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		initEAttribute(getProcedure_Frequency(), ecorePackage.getEInt(), "frequency", null, 0, 1, Procedure.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcedure_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Procedure.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Service(), ecorePackage.getEString(), "service", null, 0, 1, Action.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

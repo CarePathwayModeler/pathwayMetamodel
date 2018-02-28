@@ -93,6 +93,8 @@ public class PathwayMetamodelFactoryImpl extends EFactoryImpl implements Pathway
 			return createCategory();
 		case PathwayMetamodelPackage.PROCEDURE:
 			return createProcedure();
+		case PathwayMetamodelPackage.ACTION:
+			return createAction();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -306,6 +308,16 @@ public class PathwayMetamodelFactoryImpl extends EFactoryImpl implements Pathway
 	public Procedure createProcedure() {
 		ProcedureImpl procedure = new ProcedureImpl();
 		return procedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Action createAction() {
+		ActionImpl action = new ActionImpl();
+		return action;
 	}
 
 	/**

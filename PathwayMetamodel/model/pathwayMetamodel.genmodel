@@ -153,5 +153,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/frequency"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/quantity"/>
     </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/service"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
