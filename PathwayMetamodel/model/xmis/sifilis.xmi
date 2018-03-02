@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="781" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/?format=json" name="S&#xed;filis" code="SIF">
+  <element xsi:type="pathwayMetamodel:Treatment" id="2881" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/tratamentos/2881/" name="Exame de VDRL" description="Gerar solicita&#xe7;&#xe3;o de exame de VDRL mensal at&#xe9; o final da gesta&#xe7;&#xe3;o" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/tratamentos/2881/exames/241/" exam_id="28061004" limb_side="" quantity="1" reason="Tratamento de S&#xed;filis" clinical_indication="N/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="2882" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2882/" name="Avaliar VDRL" description="Avaliar VDRL" inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.3">
+    <questions text="VDRL Positivo?(  >=1:8 )" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2882/perguntas/1161/" id="1161">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2101" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription" id="2884" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/receitas/2884/" name="Tratamento para S&#xed;filis" description="Tratamento para S&#xed;filis" isTerminal="true" inputSequences="//@sequence.2 //@sequence.4 //@sequence.8"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="2886" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2886/" name="Averiguar Tratamento Pr&#xe9;vio" description="Averiguar Tratamento Pr&#xe9;vio" inputSequences="//@sequence.3" outputSequences="//@sequence.4 //@sequence.5">
+    <questions text="Houve tratamento previo?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2886/perguntas/1162/" id="1162">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2102" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="2887" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/informacoes/2887/" name="Classifica&#xe7;&#xe3;o: Cicatriz Sorol&#xf3;gico" description="Classifica&#xe7;&#xe3;o: Cicatriz Sorol&#xf3;gico" inputSequences="//@sequence.5" outputSequences="//@sequence.6"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2888" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/tratamentos/2888/" name="Exame FTA ABS" description="Solicitar exame FTA ABS" inputSequences="//@sequence.6" outputSequences="//@sequence.7">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/tratamentos/2888/exames/242/" exam_id="27040259" limb_side="" quantity="1" reason="Tratamento para S&#xed;filis" clinical_indication="N/a"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="2889" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2889/" name="Avaliar FTA ABS" description="Avaliar resultado do exame de FTA ABS" inputSequences="//@sequence.7" outputSequences="//@sequence.8 //@sequence.9">
+    <questions text="Resultado do FTA ABS positivo?" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/auxilios-conduta/2889/perguntas/1163/" id="1163">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2103" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="2890" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/informacoes/2890/" name="N&#xe3;o necessita tratamento" description="N&#xe3;o &#xe9; necess&#xe1;rio tratamento" isTerminal="true" inputSequences="//@sequence.9"/>
+  <element xsi:type="pathwayMetamodel:Action" id="2921" type="Acao" type_verbose="A&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/acoes/2921/" name="Diagnosticar S&#xed;filis" description="Classificar como &quot;S&#xed;filis&quot;" inputSequences="//@sequence.1" outputSequences="//@sequence.2" service="registrar_diagnostico"/>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="2891" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2891/" name="S1" description=""/>
+  <sequence inputStep="//@element.8" outputStep="//@element.1" id="2892" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2892/" name="S2 (VDRL >= 1:8)" description="">
+    <operation name="vdrl >= 1:8" Operator="affirmation" id="2104">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2101" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.8" id="2893" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2893/" name="S3" description="Prescrever Penicilina para gestante e parceiro"/>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="2895" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2895/" name="S5 (vdrl &lt; 1:8)" description="">
+    <operation name="VDRL negativo" id="2105">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2101" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.2" outputStep="//@element.3" id="2896" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2896/" name="S6 (sem tratamento previo)" description="">
+    <operation name="Sem tratamento pr&#xe9;vio" id="2106">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2102" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="2897" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2897/" name="S7 (houve tratamento pr&#xe9;vio)" description="">
+    <operation name="Houve tratamento pr&#xe9;vio" Operator="affirmation" id="2107">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2102" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.4" id="2898" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2898/" name="S8" description=""/>
+  <sequence inputStep="//@element.6" outputStep="//@element.5" id="2899" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2899/" name="S9" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.6" id="2900" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2900/" name="S10 (fta positivo)" description="">
+    <operation name="FTA ABS positivo" Operator="affirmation" id="2108">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2103" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.6" id="2901" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/781/sequencias/2901/" name="S11 (FTA negativo)" description="">
+    <operation name="FTA ABS negativo" id="2109">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2103" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_vdrl_positivo" id="2101" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_tratamento_previo" id="2102" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sifilis_fta_abs_positivo" id="2103" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

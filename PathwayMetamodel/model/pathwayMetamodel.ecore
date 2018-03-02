@@ -63,8 +63,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Referral" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pathway" lowerBound="1"
-        upperBound="-1" eType="#//Pathway"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathways" lowerBound="1"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Treatment" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="examination" upperBound="-1"

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pathwayMetamodel.Referral#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link pathwayMetamodel.Referral#getPathways <em>Pathways</em>}</li>
  * </ul>
  *
  * @see pathwayMetamodel.PathwayMetamodelPackage#getReferral()
@@ -22,19 +22,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Referral extends Element {
 	/**
-	 * Returns the value of the '<em><b>Pathway</b></em>' reference list.
-	 * The list contents are of type {@link pathwayMetamodel.Pathway}.
+	 * Returns the value of the '<em><b>Pathways</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pathway</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Pathways</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pathway</em>' reference list.
-	 * @see pathwayMetamodel.PathwayMetamodelPackage#getReferral_Pathway()
+	 * @return the value of the '<em>Pathways</em>' attribute list.
+	 * @see pathwayMetamodel.PathwayMetamodelPackage#getReferral_Pathways()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Pathway> getPathway();
+	EList<String> getPathways();
 
 } // Referral

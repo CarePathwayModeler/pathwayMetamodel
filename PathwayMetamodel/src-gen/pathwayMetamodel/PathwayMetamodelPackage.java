@@ -978,13 +978,13 @@ public interface PathwayMetamodelPackage extends EPackage {
 	int REFERRAL__MANDATORY = ELEMENT__MANDATORY;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' reference list.
+	 * The feature id for the '<em><b>Pathways</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__PATHWAY = ELEMENT_FEATURE_COUNT + 0;
+	int REFERRAL__PATHWAYS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Referral</em>' class.
@@ -2668,15 +2668,15 @@ public interface PathwayMetamodelPackage extends EPackage {
 	EClass getReferral();
 
 	/**
-	 * Returns the meta object for the reference list '{@link pathwayMetamodel.Referral#getPathway <em>Pathway</em>}'.
+	 * Returns the meta object for the attribute list '{@link pathwayMetamodel.Referral#getPathways <em>Pathways</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Pathway</em>'.
-	 * @see pathwayMetamodel.Referral#getPathway()
+	 * @return the meta object for the attribute list '<em>Pathways</em>'.
+	 * @see pathwayMetamodel.Referral#getPathways()
 	 * @see #getReferral()
 	 * @generated
 	 */
-	EReference getReferral_Pathway();
+	EAttribute getReferral_Pathways();
 
 	/**
 	 * Returns the meta object for class '{@link pathwayMetamodel.Treatment <em>Treatment</em>}'.
@@ -3802,12 +3802,12 @@ public interface PathwayMetamodelPackage extends EPackage {
 		EClass REFERRAL = eINSTANCE.getReferral();
 
 		/**
-		 * The meta object literal for the '<em><b>Pathway</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Pathways</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REFERRAL__PATHWAY = eINSTANCE.getReferral_Pathway();
+		EAttribute REFERRAL__PATHWAYS = eINSTANCE.getReferral_Pathways();
 
 		/**
 		 * The meta object literal for the '{@link pathwayMetamodel.impl.TreatmentImpl <em>Treatment</em>}' class.

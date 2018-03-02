@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="841" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/?format=json" name="Neutropenia Febril" code="H014">
+  <element xsi:type="pathwayMetamodel:Information" id="2561" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/informacoes/2561/" name="Avalia&#xe7;&#xe3;o Cl&#xed;nica Rigorosa (sem toque retal)" description="REALIZAR AVALIA&#xc7;&#xc3;O CL&#xcd;NICA RIGOROSA, COM EXAME F&#xcd;SICO COMPLETO - PELE, S&#xcd;TIOS DE PUN&#xc7;&#xc3;O, OROFARINGE, PULM&#xc3;O, ABDOME E PER&#xcd;NEO (N&#xc3;O REALIZAR TOQUE RETAL)" isInitial="true" outputSequences="//@sequence.0"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2562" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2562/" name="Hemoculturas de Sange Perif&#xe9;rico" description="Aviso: Solicitar cultura de outros s&#xed;tios e exames de imagem e pun&#xe7;&#xe3;o (via conduta complementar) de acordo com sinais e sintomatologia" inputSequences="//@sequence.0" outputSequences="//@sequence.1">
+    <examination url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2562/exames/2121/" exam_id="28100298" limb_side="" quantity="2" reason="Tratamento para Neutropenia Febril" clinical_indication="2 hemoculturas de sangue perif&#xe9;rico. Aviso: Solicitar cultura de outros s&#xed;tios e exames de imagem e pun&#xe7;&#xe3;o (via conduta complementar) de acordo com sinais e sintomatologia"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="2564" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/" name="MASCC SCORE" description="C&#xe1;lculo do MASCC Score" inputSequences="//@sequence.1" outputSequences="//@sequence.2">
+    <questions text="Sintomas Leves ou Ausentes?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2001/" id="2001">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="3041" weight="5" value="false"/>
+    </questions>
+    <questions text="PaS > 100mmhg?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2002/" id="2002">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="3042" weight="5" value="false"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de Doen&#xe7;a Pulmonar Obstrutiva Cr&#xf4;nica?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2003/" id="2003">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="3043" weight="4" value="false"/>
+    </questions>
+    <questions text="Tumores s&#xf3;lidos ou neoplasia hematol&#xf3;gica sem infec&#xe7;&#xe3;o f&#xfa;ngica pr&#xe9;via?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2004/" id="2004">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="3044" weight="4" value="false"/>
+    </questions>
+    <questions text="Aus&#xea;ncia de desidrata&#xe7;&#xe3;o com necessidade de reposi&#xe7;&#xe3;o parenteral?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2005/" id="2005">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="3045" weight="3" value="false"/>
+    </questions>
+    <questions text="Sintomas moderados?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2006/" id="2006">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="3046" weight="3" value="false"/>
+    </questions>
+    <questions text="Status ambulatorial?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2007/" id="2007">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="3047" weight="3" value="false"/>
+    </questions>
+    <questions text="Idade &lt; 60 anos?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2564/perguntas/2008/" id="2008">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="3048" weight="2" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="2581" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2581/" name="Avaliar Sintomas Adicionais" description="Avaliar presen&#xe7;a de sintomas espec&#xed;ficos adicionais para definir tratamento apropriado" inputSequences="//@sequence.2">
+    <questions text="Paciente apresenta Diarr&#xe9;ia, Mucosite, Dor abdominal ou Sangramento retal?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2581/perguntas/2022/" id="2022">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="3063" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente apresenta hipotens&#xe3;o, infec&#xe7;&#xe3;o de cateteres, infec&#xe7;&#xe3;o de pele ou partes moles ou est&#xe1; em uso de profilaxia com quinolona para neutropenia febril?" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/auxilios-conduta/2581/perguntas/2023/" id="2023">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="3064" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2583" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2583/" name="Tratamento I (Sem sintomas adicionais)" description="Sem sintomas adicionais">
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2583/medicamentos/1221/" med_id="111473" id="1221" name="" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1221" frequency="8" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2583/medicamentos/1222/" med_id="118759" id="1222" name="" brand="" unit="GR" access="6" daily_dosage="4" cycles="1" treatement_time="1222" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2584" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2584/" name="Tratamento II (com diarr&#xe9;ia, mucosite...)" description="Paciente apresenta Diarr&#xe9;ia, Mucosite, Dor abdominal ou Sangramento retal">
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2584/medicamentos/1223/" med_id="111473" id="1223" name="" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1223" frequency="8" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2584/medicamentos/1224/" med_id="118759" id="1224" name="" brand="" unit="GR" access="6" daily_dosage="4" cycles="1" treatement_time="1224" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2584/medicamentos/1225/" med_id="108324" id="1225" name="" brand="" unit="MG" access="6" daily_dosage="500" cycles="1" treatement_time="1225" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2585" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2585/" name="Tratamento III (hipotens&#xe3;o, infec&#xe7;&#xe3;o...)" description="Paciente apresenta hipotens&#xe3;o, infec&#xe7;&#xe3;o de cateteres, infec&#xe7;&#xe3;o de pele ou partes moles ou est&#xe1; em uso de profilaxia com quinolona para neutropenia febril">
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2585/medicamentos/1226/" med_id="111473" id="1226" name="" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1226" frequency="8" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2585/medicamentos/1227/" med_id="118759" id="1227" name="" brand="" unit="GR" access="6" daily_dosage="4" cycles="1" treatement_time="1227" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2585/medicamentos/1228/" med_id="109134" id="1228" name="" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="1228" frequency="12" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="2586" type="Tratamento" type_verbose="Tratamento" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2586/" name="Tratamento IV (todos os sintomas)" description="Paciente apresenta Diarr&#xe9;ia, Mucosite, Dor abdominal ou Sangramento retal&#xA;&#xA;e tamb&#xe9;m&#xA;&#xA;hipotens&#xe3;o, infec&#xe7;&#xe3;o de cateteres, infec&#xe7;&#xe3;o de pele ou partes moles ou est&#xe1; em uso de profilaxia com quinolona para neutropenia febril">
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2586/medicamentos/1229/" med_id="111473" id="1229" name="" brand="" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="1229" frequency="8" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2586/medicamentos/1230/" med_id="118759" id="1230" name="" brand="" unit="GR" access="6" daily_dosage="4" cycles="1" treatement_time="1230" frequency="6" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2586/medicamentos/1231/" med_id="108324" id="1231" name="" brand="" unit="MG" access="6" daily_dosage="500" cycles="1" treatement_time="1231" frequency="8" standard="null"/>
+    <medication url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/tratamentos/2586/medicamentos/1232/" med_id="109134" id="1232" name="" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="1232" frequency="12" standard="null"/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="2563" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/sequencias/2563/" name="S1" description=""/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="2565" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/sequencias/2565/" name="S2" description=""/>
+  <sequence inputStep="//@element.3" outputStep="//@element.2" id="2582" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/841/sequencias/2582/" name="S3 (MASC &lt; 21)" description="">
+    <operation name="MASCC &lt; 21" Operator="lessThan" id="3061">
+      <operand xsi:type="pathwayMetamodel:Operation" name="MASCC SCORE" Operator="addition" id="3049">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="3041" weight="5" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="3042" weight="5" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="3043" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="3044" weight="4" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="3045" weight="3" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="3046" weight="3" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="3047" weight="3" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="3048" weight="2" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Numeric" name="21" id="3050" weight="1" value="21.0"/>
+    </operation>
+  </sequence>
+  <operation name="MASCC SCORE" Operator="addition" id="3049">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="3041" weight="5" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="3042" weight="5" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="3043" weight="4" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="3044" weight="4" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="3045" weight="3" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="3046" weight="3" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="3047" weight="3" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="3048" weight="2" value="false"/>
+  </operation>
+  <operation name="Sintoma I AND Sintona II" Operator="and" id="3065">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="3063" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="3064" weight="1" value="false"/>
+  </operation>
+  <operation name="Sintoma I OR Sintoma II" Operator="or" id="3066">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="3063" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="3064" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_leves_neutropenia" id="3041" weight="5" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_pas_neutropenia" id="3042" weight="5" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_doenca_pulmonar_neutropenia" id="3043" weight="4" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_tumores_solidos_neoplasia_neutropenia" id="3044" weight="4" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sem_desidratacao_neutropenia" id="3045" weight="3" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_sintomas_moderados_neutropenia" id="3046" weight="3" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_status_ambulatorial_neutropenia" id="3047" weight="3" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="mascc_score_idade_menor_60_neutropenia" id="3048" weight="2" value="false"/>
+  <variable xsi:type="pathwayMetamodel:Numeric" name="21" id="3050" weight="1" value="21.0"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_i_neutropenia" id="3063" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="sintomas_adicionais_ii_neutropenia" id="3064" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

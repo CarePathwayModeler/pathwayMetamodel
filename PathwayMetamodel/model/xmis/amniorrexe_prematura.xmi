@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="61" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/?format=json" name="Amniorrexe Prematura" code="H004">
+  <element xsi:type="pathwayMetamodel:Treatment" id="281" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/281/" name="Tratamento Inicial" description="Solicite os exames para iniciar o tratamento do paciente" isInitial="true" outputSequences="//@sequence.0">
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/281/exames/41/" exam_id="28040481" limb_side="" quantity="1" reason="Protocolo de Aminiorrexe Prematura" clinical_indication="Protocolo de Aminiorrexe Prematura"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/281/exames/43/" exam_id="28100549" limb_side="" quantity="1" reason="Protocolo de Aminiorrexe Prematura" clinical_indication="Protocolo de Aminiorrexe Prematura"/>
+    <examination url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/281/exames/181/" exam_id="28060865" limb_side="" quantity="1" reason="amniorexe  prematura" clinical_indication="amniorexe  prematura"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="282" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/282/" name="Verificar Resultado dos Exames" description="Verifique o resultados dos exames." inputSequences="//@sequence.0" outputSequences="//@sequence.1 //@sequence.2">
+    <questions text="H&#xe1; infec&#xe7;&#xe3;o?" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/282/perguntas/221/" id="221">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="361" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="283" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/283/" name="Tratamento Corioamnionite" description="Inicie o tratamento para Corioamnionite." inputSequences="//@sequence.1" outputSequences="//@sequence.3">
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/283/medicamentos/141/" med_id="37400" id="141" name="GENTAMICINA 80 MG AMPL 2 ML" brand="BIOCHIMICO" unit="MG" access="6" daily_dosage="240" cycles="1" treatement_time="141" frequency="24" standard="null"/>
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/283/medicamentos/321/" med_id="38822" id="321" name="DALACIN 300 MG AMPL 2 ML" brand="UPJOHN" unit="MG" access="6" daily_dosage="900" cycles="1" treatement_time="321" frequency="8" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="285" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/285/" name="Verificar Idade Gestacional" description="Verifique a idade gestacional da paciente." inputSequences="//@sequence.2" outputSequences="//@sequence.4 //@sequence.5 //@sequence.6">
+    <questions text="Gesta&#xe7;&#xe3;o &lt; 24 semanas" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/285/perguntas/222/" id="222">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="362" weight="1" value="false"/>
+    </questions>
+    <questions text="Gesta&#xe7;&#xe3;o entre 24 e 33 semanas" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/285/perguntas/223/" id="223">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="363" weight="1" value="false"/>
+    </questions>
+    <questions text="Gesta&#xe7;&#xe3;o >= 34 semanas" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/285/perguntas/224/" id="224">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="364" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="286" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/informacoes/286/" name="Conduta Individualizada" description="Texto da conduta individualizada" inputSequences="//@sequence.4" outputSequences="//@sequence.11"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="287" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/287/" name="Tratamento Gesta&#xe7;&#xe3;o Entre 24 e 33 Semanas" description="Sugerimos,  iniciar antibi&#xf3;tico para prolongar lat&#xea;ncia. Ap&#xf3;s 48 horas, indicar substitui&#xe7;&#xe3;o do tratamento por: AMOXICILINA 500 MG VO 8/8H durante 5 Dias. Aten&#xe7;&#xe3;o: N&#xc3;O USAR AMOXICILINA-CLAVULONATO PELO RISCO DE ENTEROCOLITE NECROSANTE." inputSequences="//@sequence.5" outputSequences="//@sequence.10">
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/287/medicamentos/142/" med_id="75116" id="142" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="142" frequency="6" standard="null"/>
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/287/medicamentos/162/" med_id="37150" id="162" name="CELESTONE SOLUSPAN AMPL 1 ML" brand="SHERING" unit="MG" access="6" daily_dosage="12" cycles="1" treatement_time="162" frequency="24" standard="null"/>
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/287/medicamentos/322/" med_id="130123" id="322" name="ZITROMAX 500MG AMPL 1 UD" brand="" unit="GR" access="6" daily_dosage="1" cycles="1" treatement_time="322" frequency="24" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="288" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/288/" name="Verificar Tempo de Aminiorrexe" description="Verifique o tempo de aminiorrexe" inputSequences="//@sequence.6" outputSequences="//@sequence.7 //@sequence.8">
+    <questions text="Aminiorrexe > 18 horas?" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/288/perguntas/241/" id="241">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="381" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment" id="289" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/289/" name="Profilaxia para GBS - Parto Normal" description="Inicie o tratamento de profilaxia para GBS parto normal - Definir os medicamentos" inputSequences="//@sequence.15" outputSequences="//@sequence.9">
+    <medication url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/289/medicamentos/181/" med_id="75116" id="181" name="AMPICILINA 1 GR AMPL 1 UD" brand="BIOCHIMICO/BAYER" unit="GR" access="6" daily_dosage="2" cycles="1" treatement_time="181" frequency="6" standard="null"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="361" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/informacoes/361/" name="Informativo: Conduta Ativa - Antecipa&#xe7;&#xe3;o do Parto" description="Recomenda-se antecipa&#xe7;&#xe3;o do parto. Solicite a interna&#xe7;&#xe3;o no PEP\SAM para prosseguir com os cuidados." isTerminal="true" inputSequences="//@sequence.3 //@sequence.8 //@sequence.9 //@sequence.12 //@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Treatment" id="362" type="Tratamento" type_verbose="Tratamento" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/tratamentos/362/" name="Profilaxia para GBS - Ces&#xe1;rea" description="Inicie o tratamento de profilaxia para GBS parto ces&#xe1;rea - Definir os medicamentos" inputSequences="//@sequence.14" outputSequences="//@sequence.16"/>
+  <element xsi:type="pathwayMetamodel:Information" id="364" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/informacoes/364/" name="Informativo de Interna&#xe7;&#xe3;o no SAM" description="Solicite a interna&#xe7;&#xe3;o clinico/obst&#xe9;trico no PEP/SAM" isTerminal="true" inputSequences="//@sequence.10"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="381" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/381/" name="Avaliar Crit&#xe9;rios de Conduta" description="Avalie os crit&#xe9;rios a seguir para definir a conduta da paciente." inputSequences="//@sequence.11" outputSequences="//@sequence.12 //@sequence.13">
+    <questions text="Vitalidade Fetal?" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/381/perguntas/301/" id="301">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="481" weight="1" value="false"/>
+    </questions>
+    <questions text="Trabalho de Parto?" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/381/perguntas/302/" id="302">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+    </questions>
+    <questions text="Paciente opta por conduta ativa?" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/381/perguntas/303/" id="303">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+    </questions>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information" id="382" type="Informacao" type_verbose="Informa&#xe7;&#xe3;o" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/informacoes/382/" name="Aviso: Conduta Passiva" description="Texto da conduta passiva"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="383" type="Receita" type_verbose="Receita" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/receitas/383/" name="Receita Conduta Passiva" description="Adicionar texto e medicamentos da conduta passiva" isTerminal="true" inputSequences="//@sequence.13"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct" id="387" type="AuxilioConduta" type_verbose="Aux&#xed;lio Conduta" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/387/" name="Verificar Via de Parto" description="Verifique a via de parto desejada pela paciente." inputSequences="//@sequence.7" outputSequences="//@sequence.14 //@sequence.15">
+    <questions text="Normal" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/387/perguntas/304/" id="304">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="490" weight="1" value="false"/>
+    </questions>
+    <questions text="Ces&#xe1;rea" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/auxilios-conduta/387/perguntas/305/" id="305">
+      <answers xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="491" weight="1" value="false"/>
+    </questions>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="301" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/301/" name="s1" description="s1"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="302" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/302/" name="s2" description="s2">
+    <operation name="ha-infeccao" Operator="affirmation" id="382">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="361" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.3" outputStep="//@element.1" id="303" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/303/" name="s3" description="s3">
+    <operation name="sem-infeccao" id="383">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="361" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.2" id="304" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/304/" name="s4" description="s4"/>
+  <sequence inputStep="//@element.4" outputStep="//@element.3" id="305" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/305/" name="s5" description="s5">
+    <operation name="s4-ig-menor-24-semanas" Operator="affirmation" id="384">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="362" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.5" outputStep="//@element.3" id="306" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/306/" name="s6" description="s6">
+    <operation name="s5-ig-entre-24-33" Operator="affirmation" id="385">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="363" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.6" outputStep="//@element.3" id="307" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/307/" name="s7" description="s7">
+    <operation name="s7-ig-maior-igual-34" Operator="affirmation" id="386">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="364" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.14" outputStep="//@element.6" id="308" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/308/" name="s8" description="s8">
+    <operation name="aminio-maior-18h" Operator="affirmation" id="387">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="381" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.6" id="309" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/309/" name="s9" description="s9">
+    <operation name="aminio-menor-18h" id="388">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="381" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.7" id="363" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/363/" name="s10" description="s10"/>
+  <sequence inputStep="//@element.10" outputStep="//@element.5" id="365" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/365/" name="s11" description="navega para informa&#xe7;&#xe3;o de interna&#xe7;&#xe3;o no SAM"/>
+  <sequence inputStep="//@element.11" outputStep="//@element.4" id="384" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/384/" name="s12" description="s12"/>
+  <sequence inputStep="//@element.8" outputStep="//@element.11" id="385" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/385/" name="s13" description="s13">
+    <operation name="sem-vitalidade-fetal-ou-trabalho-de-parto-ou-opcao-ativa" Operator="or" id="488">
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-vitalidade-fetal" id="484">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="481" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="trabalho-parto-ou-conduta-ativa" Operator="or" id="485">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.13" outputStep="//@element.11" id="386" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/386/" name="s14" description="s14">
+    <operation name="vitalidade-fetal-sem-trabalho-parto-sem-optar-conduta-ativa" Operator="and" id="489">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="481" weight="1" value="false"/>
+      <operand xsi:type="pathwayMetamodel:Operation" name="sem-trabalho-parto" id="486">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+      </operand>
+      <operand xsi:type="pathwayMetamodel:Operation" name="nao-optante-conduta-ativa" id="487">
+        <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+      </operand>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.9" outputStep="//@element.14" id="389" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/389/" name="s15" description="s15">
+    <operation name="optante-parto-cesarea" Operator="affirmation" id="492">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="491" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.7" outputStep="//@element.14" id="391" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/391/" name="s16" description="s16">
+    <operation name="optante-parto-normal" Operator="affirmation" id="493">
+      <operand xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="490" weight="1" value="false"/>
+    </operation>
+  </sequence>
+  <sequence inputStep="//@element.8" outputStep="//@element.9" id="392" type="Sequencia" type_verbose="Sequencia" url="http://app-homolog.hapvida.com.br/api/protocolo/hospitalar/protmed/autoria/protocolos/61/sequencias/392/" name="s17" description="s17"/>
+  <operation name="sem-vitalidade-fetal" id="484">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="481" weight="1" value="false"/>
+  </operation>
+  <operation name="trabalho-parto-ou-conduta-ativa" Operator="or" id="485">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+  </operation>
+  <operation name="sem-trabalho-parto" id="486">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+  </operation>
+  <operation name="nao-optante-conduta-ativa" id="487">
+    <operand xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+  </operation>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="presenca-infeccao" id="361" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-menor-24" id="362" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-entre-24-33" id="363" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="ig-maior-igual-34" id="364" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="aminiorexe-maior-18-horas" id="381" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="vitalidade-fetal" id="481" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="trabalho-parto" id="482" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="conduta-ativa-paciente" id="483" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-normal" id="490" weight="1" value="false"/>
+  <variable xsi:type="pathwayMetamodel:YesOrNo" name="opcao-parto-cesarea" id="491" weight="1" value="false"/>
+</pathwayMetamodel:Pathway>

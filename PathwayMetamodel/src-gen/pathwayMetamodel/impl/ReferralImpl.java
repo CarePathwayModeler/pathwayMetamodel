@@ -8,9 +8,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import pathwayMetamodel.Pathway;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import pathwayMetamodel.PathwayMetamodelPackage;
 import pathwayMetamodel.Referral;
 
@@ -22,21 +20,21 @@ import pathwayMetamodel.Referral;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pathwayMetamodel.impl.ReferralImpl#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link pathwayMetamodel.impl.ReferralImpl#getPathways <em>Pathways</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ReferralImpl extends ElementImpl implements Referral {
 	/**
-	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' reference list.
+	 * The cached value of the '{@link #getPathways() <em>Pathways</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPathway()
+	 * @see #getPathways()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pathway> pathway;
+	protected EList<String> pathways;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,12 +60,11 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Pathway> getPathway() {
-		if (pathway == null) {
-			pathway = new EObjectResolvingEList<Pathway>(Pathway.class, this,
-					PathwayMetamodelPackage.REFERRAL__PATHWAY);
+	public EList<String> getPathways() {
+		if (pathways == null) {
+			pathways = new EDataTypeUniqueEList<String>(String.class, this, PathwayMetamodelPackage.REFERRAL__PATHWAYS);
 		}
-		return pathway;
+		return pathways;
 	}
 
 	/**
@@ -78,8 +75,8 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case PathwayMetamodelPackage.REFERRAL__PATHWAY:
-			return getPathway();
+		case PathwayMetamodelPackage.REFERRAL__PATHWAYS:
+			return getPathways();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -93,9 +90,9 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case PathwayMetamodelPackage.REFERRAL__PATHWAY:
-			getPathway().clear();
-			getPathway().addAll((Collection<? extends Pathway>) newValue);
+		case PathwayMetamodelPackage.REFERRAL__PATHWAYS:
+			getPathways().clear();
+			getPathways().addAll((Collection<? extends String>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -109,8 +106,8 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case PathwayMetamodelPackage.REFERRAL__PATHWAY:
-			getPathway().clear();
+		case PathwayMetamodelPackage.REFERRAL__PATHWAYS:
+			getPathways().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -124,10 +121,27 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case PathwayMetamodelPackage.REFERRAL__PATHWAY:
-			return pathway != null && !pathway.isEmpty();
+		case PathwayMetamodelPackage.REFERRAL__PATHWAYS:
+			return pathways != null && !pathways.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (pathways: ");
+		result.append(pathways);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ReferralImpl

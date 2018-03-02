@@ -660,8 +660,8 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getReferral_Pathway() {
-		return (EReference) referralEClass.getEStructuralFeatures().get(0);
+	public EAttribute getReferral_Pathways() {
+		return (EAttribute) referralEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1350,7 +1350,7 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		createEAttribute(numericEClass, NUMERIC__VALUE);
 
 		referralEClass = createEClass(REFERRAL);
-		createEReference(referralEClass, REFERRAL__PATHWAY);
+		createEAttribute(referralEClass, REFERRAL__PATHWAYS);
 
 		treatmentEClass = createEClass(TREATMENT);
 		createEReference(treatmentEClass, TREATMENT__EXAMINATION);
@@ -1575,9 +1575,8 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 
 		initEClass(referralEClass, Referral.class, "Referral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReferral_Pathway(), this.getPathway(), null, "pathway", null, 1, -1, Referral.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getReferral_Pathways(), ecorePackage.getEString(), "pathways", null, 1, -1, Referral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(treatmentEClass, Treatment.class, "Treatment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

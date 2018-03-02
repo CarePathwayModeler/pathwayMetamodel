@@ -78,7 +78,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Numeric/value"/>
     </genClasses>
     <genClasses ecoreClass="pathwayMetamodel.ecore#//Referral">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Referral/pathway"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Referral/pathways"/>
     </genClasses>
     <genClasses ecoreClass="pathwayMetamodel.ecore#//Treatment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/examination"/>
