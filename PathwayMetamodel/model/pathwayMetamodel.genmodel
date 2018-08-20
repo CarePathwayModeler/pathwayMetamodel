@@ -87,7 +87,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/procedure"/>
     </genClasses>
     <genClasses ecoreClass="pathwayMetamodel.ecore#//Prescription">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Prescription/medication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Prescription/item"/>
     </genClasses>
     <genClasses ecoreClass="pathwayMetamodel.ecore#//Admission">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/url"/>
@@ -154,7 +154,38 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/quantity"/>
     </genClasses>
     <genClasses ecoreClass="pathwayMetamodel.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/process_id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/service"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/description"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Process">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Process/action"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Pause"/>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/med_code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/presentation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/period"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/period_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/frequency_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Item/orientations"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Choice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Choice/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Choice/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Choice/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Choice/option"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Option/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Option/weight"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

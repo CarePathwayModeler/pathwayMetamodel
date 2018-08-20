@@ -1277,13 +1277,13 @@ public interface PathwayMetamodelPackage extends EPackage {
 	int PRESCRIPTION__MANDATORY = ELEMENT__MANDATORY;
 
 	/**
-	 * The feature id for the '<em><b>Medication</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Item</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__MEDICATION = ELEMENT_FEATURE_COUNT + 0;
+	int PRESCRIPTION__ITEM = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Prescription</em>' class.
@@ -2065,97 +2065,16 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__ID = ELEMENT__ID;
+	int ACTION__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The feature id for the '<em><b>Process id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__TYPE = ELEMENT__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__TYPE_VERBOSE = ELEMENT__TYPE_VERBOSE;
-
-	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__URL = ELEMENT__URL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__NAME = ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__DESCRIPTION = ELEMENT__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Is Initial</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__IS_INITIAL = ELEMENT__IS_INITIAL;
-
-	/**
-	 * The feature id for the '<em><b>Is Terminal</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__IS_TERMINAL = ELEMENT__IS_TERMINAL;
-
-	/**
-	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
-
-	/**
-	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
-
-	/**
-	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTION__MANDATORY = ELEMENT__MANDATORY;
+	int ACTION__PROCESS_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Service</b></em>' attribute.
@@ -2164,7 +2083,16 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION__SERVICE = ELEMENT_FEATURE_COUNT + 0;
+	int ACTION__SERVICE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__DESCRIPTION = 3;
 
 	/**
 	 * The number of structural features of the '<em>Action</em>' class.
@@ -2173,7 +2101,7 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+	int ACTION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Action</em>' class.
@@ -2182,7 +2110,525 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTION_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int ACTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.ProcessImpl <em>Process</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.ProcessImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getProcess()
+	 * @generated
+	 */
+	int PROCESS = 21;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__TYPE = ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__TYPE_VERBOSE = ELEMENT__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__URL = ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__DESCRIPTION = ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Initial</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__IS_INITIAL = ELEMENT__IS_INITIAL;
+
+	/**
+	 * The feature id for the '<em><b>Is Terminal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__IS_TERMINAL = ELEMENT__IS_TERMINAL;
+
+	/**
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__MANDATORY = ELEMENT__MANDATORY;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__ACTION = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Process</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Process</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.PauseImpl <em>Pause</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.PauseImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getPause()
+	 * @generated
+	 */
+	int PAUSE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__TYPE = ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__TYPE_VERBOSE = ELEMENT__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__URL = ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__DESCRIPTION = ELEMENT__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Initial</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__IS_INITIAL = ELEMENT__IS_INITIAL;
+
+	/**
+	 * The feature id for the '<em><b>Is Terminal</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__IS_TERMINAL = ELEMENT__IS_TERMINAL;
+
+	/**
+	 * The feature id for the '<em><b>Input Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__INPUT_SEQUENCES = ELEMENT__INPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Output Sequences</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__OUTPUT_SEQUENCES = ELEMENT__OUTPUT_SEQUENCES;
+
+	/**
+	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE__MANDATORY = ELEMENT__MANDATORY;
+
+	/**
+	 * The number of structural features of the '<em>Pause</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Pause</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAUSE_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.ItemImpl <em>Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.ItemImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getItem()
+	 * @generated
+	 */
+	int ITEM = 23;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__URL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Med code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__MED_CODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Presentation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__PRESENTATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ACCESS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__QUANTITY = 6;
+
+	/**
+	 * The feature id for the '<em><b>Period</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__PERIOD = 7;
+
+	/**
+	 * The feature id for the '<em><b>Period unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__PERIOD_UNIT = 8;
+
+	/**
+	 * The feature id for the '<em><b>Frequency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__FREQUENCY = 9;
+
+	/**
+	 * The feature id for the '<em><b>Frequency unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__FREQUENCY_UNIT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Orientations</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ORIENTATIONS = 11;
+
+	/**
+	 * The number of structural features of the '<em>Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_FEATURE_COUNT = 12;
+
+	/**
+	 * The number of operations of the '<em>Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.ChoiceImpl <em>Choice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.ChoiceImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getChoice()
+	 * @generated
+	 */
+	int CHOICE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__NAME = VARIABLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__ID = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__WEIGHT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__VALUE = VARIABLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__OPTION = VARIABLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pathwayMetamodel.impl.OptionImpl <em>Option</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pathwayMetamodel.impl.OptionImpl
+	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getOption()
+	 * @generated
+	 */
+	int OPTION = 25;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTION__DESCRIPTION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTION__WEIGHT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Option</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Option</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link pathwayMetamodel.Operator <em>Operator</em>}' enum.
@@ -2192,7 +2638,7 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getOperator()
 	 * @generated
 	 */
-	int OPERATOR = 21;
+	int OPERATOR = 26;
 
 	/**
 	 * Returns the meta object for class '{@link pathwayMetamodel.Operation <em>Operation</em>}'.
@@ -2743,15 +3189,15 @@ public interface PathwayMetamodelPackage extends EPackage {
 	EClass getPrescription();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link pathwayMetamodel.Prescription#getMedication <em>Medication</em>}'.
+	 * Returns the meta object for the containment reference list '{@link pathwayMetamodel.Prescription#getItem <em>Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Medication</em>'.
-	 * @see pathwayMetamodel.Prescription#getMedication()
+	 * @return the meta object for the containment reference list '<em>Item</em>'.
+	 * @see pathwayMetamodel.Prescription#getItem()
 	 * @see #getPrescription()
 	 * @generated
 	 */
-	EReference getPrescription_Medication();
+	EReference getPrescription_Item();
 
 	/**
 	 * Returns the meta object for class '{@link pathwayMetamodel.Admission <em>Admission</em>}'.
@@ -3384,6 +3830,28 @@ public interface PathwayMetamodelPackage extends EPackage {
 	EClass getAction();
 
 	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Action#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see pathwayMetamodel.Action#getId()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Action#getProcess_id <em>Process id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Process id</em>'.
+	 * @see pathwayMetamodel.Action#getProcess_id()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Process_id();
+
+	/**
 	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Action#getService <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3393,6 +3861,276 @@ public interface PathwayMetamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAction_Service();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Action#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see pathwayMetamodel.Action#getDescription()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Description();
+
+	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Process</em>'.
+	 * @see pathwayMetamodel.Process
+	 * @generated
+	 */
+	EClass getProcess();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pathwayMetamodel.Process#getAction <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Action</em>'.
+	 * @see pathwayMetamodel.Process#getAction()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_Action();
+
+	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Pause <em>Pause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pause</em>'.
+	 * @see pathwayMetamodel.Pause
+	 * @generated
+	 */
+	EClass getPause();
+
+	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Item <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Item</em>'.
+	 * @see pathwayMetamodel.Item
+	 * @generated
+	 */
+	EClass getItem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see pathwayMetamodel.Item#getId()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see pathwayMetamodel.Item#getUrl()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see pathwayMetamodel.Item#getName()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getMed_code <em>Med code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Med code</em>'.
+	 * @see pathwayMetamodel.Item#getMed_code()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Med_code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getPresentation <em>Presentation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Presentation</em>'.
+	 * @see pathwayMetamodel.Item#getPresentation()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Presentation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see pathwayMetamodel.Item#getAccess()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Access();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
+	 * @see pathwayMetamodel.Item#getQuantity()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Quantity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getPeriod <em>Period</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Period</em>'.
+	 * @see pathwayMetamodel.Item#getPeriod()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Period();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getPeriod_unit <em>Period unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Period unit</em>'.
+	 * @see pathwayMetamodel.Item#getPeriod_unit()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Period_unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getFrequency <em>Frequency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frequency</em>'.
+	 * @see pathwayMetamodel.Item#getFrequency()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Frequency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getFrequency_unit <em>Frequency unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frequency unit</em>'.
+	 * @see pathwayMetamodel.Item#getFrequency_unit()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Frequency_unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Item#getOrientations <em>Orientations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Orientations</em>'.
+	 * @see pathwayMetamodel.Item#getOrientations()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EAttribute getItem_Orientations();
+
+	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Choice <em>Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Choice</em>'.
+	 * @see pathwayMetamodel.Choice
+	 * @generated
+	 */
+	EClass getChoice();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Choice#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see pathwayMetamodel.Choice#getId()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EAttribute getChoice_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Choice#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see pathwayMetamodel.Choice#getWeight()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EAttribute getChoice_Weight();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Choice#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see pathwayMetamodel.Choice#getValue()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EAttribute getChoice_Value();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link pathwayMetamodel.Choice#getOption <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Option</em>'.
+	 * @see pathwayMetamodel.Choice#getOption()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EReference getChoice_Option();
+
+	/**
+	 * Returns the meta object for class '{@link pathwayMetamodel.Option <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Option</em>'.
+	 * @see pathwayMetamodel.Option
+	 * @generated
+	 */
+	EClass getOption();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Option#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see pathwayMetamodel.Option#getDescription()
+	 * @see #getOption()
+	 * @generated
+	 */
+	EAttribute getOption_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pathwayMetamodel.Option#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see pathwayMetamodel.Option#getWeight()
+	 * @see #getOption()
+	 * @generated
+	 */
+	EAttribute getOption_Weight();
 
 	/**
 	 * Returns the meta object for enum '{@link pathwayMetamodel.Operator <em>Operator</em>}'.
@@ -3862,12 +4600,12 @@ public interface PathwayMetamodelPackage extends EPackage {
 		EClass PRESCRIPTION = eINSTANCE.getPrescription();
 
 		/**
-		 * The meta object literal for the '<em><b>Medication</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Item</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRESCRIPTION__MEDICATION = eINSTANCE.getPrescription_Medication();
+		EReference PRESCRIPTION__ITEM = eINSTANCE.getPrescription_Item();
 
 		/**
 		 * The meta object literal for the '{@link pathwayMetamodel.impl.AdmissionImpl <em>Admission</em>}' class.
@@ -4350,12 +5088,238 @@ public interface PathwayMetamodelPackage extends EPackage {
 		EClass ACTION = eINSTANCE.getAction();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__ID = eINSTANCE.getAction_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Process id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__PROCESS_ID = eINSTANCE.getAction_Process_id();
+
+		/**
 		 * The meta object literal for the '<em><b>Service</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ACTION__SERVICE = eINSTANCE.getAction_Service();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__DESCRIPTION = eINSTANCE.getAction_Description();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.ProcessImpl <em>Process</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.ProcessImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getProcess()
+		 * @generated
+		 */
+		EClass PROCESS = eINSTANCE.getProcess();
+
+		/**
+		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__ACTION = eINSTANCE.getProcess_Action();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.PauseImpl <em>Pause</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.PauseImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getPause()
+		 * @generated
+		 */
+		EClass PAUSE = eINSTANCE.getPause();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.ItemImpl <em>Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.ItemImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getItem()
+		 * @generated
+		 */
+		EClass ITEM = eINSTANCE.getItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__ID = eINSTANCE.getItem_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__URL = eINSTANCE.getItem_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__NAME = eINSTANCE.getItem_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Med code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__MED_CODE = eINSTANCE.getItem_Med_code();
+
+		/**
+		 * The meta object literal for the '<em><b>Presentation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__PRESENTATION = eINSTANCE.getItem_Presentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__ACCESS = eINSTANCE.getItem_Access();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__QUANTITY = eINSTANCE.getItem_Quantity();
+
+		/**
+		 * The meta object literal for the '<em><b>Period</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__PERIOD = eINSTANCE.getItem_Period();
+
+		/**
+		 * The meta object literal for the '<em><b>Period unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__PERIOD_UNIT = eINSTANCE.getItem_Period_unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__FREQUENCY = eINSTANCE.getItem_Frequency();
+
+		/**
+		 * The meta object literal for the '<em><b>Frequency unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__FREQUENCY_UNIT = eINSTANCE.getItem_Frequency_unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Orientations</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ITEM__ORIENTATIONS = eINSTANCE.getItem_Orientations();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.ChoiceImpl <em>Choice</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.ChoiceImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getChoice()
+		 * @generated
+		 */
+		EClass CHOICE = eINSTANCE.getChoice();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHOICE__ID = eINSTANCE.getChoice_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHOICE__WEIGHT = eINSTANCE.getChoice_Weight();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHOICE__VALUE = eINSTANCE.getChoice_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Option</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHOICE__OPTION = eINSTANCE.getChoice_Option();
+
+		/**
+		 * The meta object literal for the '{@link pathwayMetamodel.impl.OptionImpl <em>Option</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pathwayMetamodel.impl.OptionImpl
+		 * @see pathwayMetamodel.impl.PathwayMetamodelPackageImpl#getOption()
+		 * @generated
+		 */
+		EClass OPTION = eINSTANCE.getOption();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPTION__DESCRIPTION = eINSTANCE.getOption_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OPTION__WEIGHT = eINSTANCE.getOption_Weight();
 
 		/**
 		 * The meta object literal for the '{@link pathwayMetamodel.Operator <em>Operator</em>}' enum.

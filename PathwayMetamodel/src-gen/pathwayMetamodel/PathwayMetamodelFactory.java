@@ -193,6 +193,51 @@ public interface PathwayMetamodelFactory extends EFactory {
 	Action createAction();
 
 	/**
+	 * Returns a new object of class '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Process</em>'.
+	 * @generated
+	 */
+	Process createProcess();
+
+	/**
+	 * Returns a new object of class '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pause</em>'.
+	 * @generated
+	 */
+	Pause createPause();
+
+	/**
+	 * Returns a new object of class '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Item</em>'.
+	 * @generated
+	 */
+	Item createItem();
+
+	/**
+	 * Returns a new object of class '<em>Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Choice</em>'.
+	 * @generated
+	 */
+	Choice createChoice();
+
+	/**
+	 * Returns a new object of class '<em>Option</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Option</em>'.
+	 * @generated
+	 */
+	Option createOption();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

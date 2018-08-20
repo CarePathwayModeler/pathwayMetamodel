@@ -7,7 +7,32 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import pathwayMetamodel.*;
+import pathwayMetamodel.Action;
+import pathwayMetamodel.Admission;
+import pathwayMetamodel.AuxiliaryConduct;
+import pathwayMetamodel.Category;
+import pathwayMetamodel.Choice;
+import pathwayMetamodel.Discharge;
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Examination;
+import pathwayMetamodel.Information;
+import pathwayMetamodel.Item;
+import pathwayMetamodel.Medication;
+import pathwayMetamodel.Numeric;
+import pathwayMetamodel.Operand;
+import pathwayMetamodel.Operation;
+import pathwayMetamodel.Option;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.PathwayMetamodelPackage;
+import pathwayMetamodel.Pause;
+import pathwayMetamodel.Prescription;
+import pathwayMetamodel.Procedure;
+import pathwayMetamodel.Question;
+import pathwayMetamodel.Referral;
+import pathwayMetamodel.Sequence;
+import pathwayMetamodel.Treatment;
+import pathwayMetamodel.Variable;
+import pathwayMetamodel.YesOrNo;
 
 /**
  * <!-- begin-user-doc -->
@@ -234,7 +259,48 @@ public class PathwayMetamodelSwitch<T> extends Switch<T> {
 			Action action = (Action) theEObject;
 			T result = caseAction(action);
 			if (result == null)
-				result = caseElement(action);
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case PathwayMetamodelPackage.PROCESS: {
+			pathwayMetamodel.Process process = (pathwayMetamodel.Process) theEObject;
+			T result = caseProcess(process);
+			if (result == null)
+				result = caseElement(process);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case PathwayMetamodelPackage.PAUSE: {
+			Pause pause = (Pause) theEObject;
+			T result = casePause(pause);
+			if (result == null)
+				result = caseElement(pause);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case PathwayMetamodelPackage.ITEM: {
+			Item item = (Item) theEObject;
+			T result = caseItem(item);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case PathwayMetamodelPackage.CHOICE: {
+			Choice choice = (Choice) theEObject;
+			T result = caseChoice(choice);
+			if (result == null)
+				result = caseVariable(choice);
+			if (result == null)
+				result = caseOperand(choice);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case PathwayMetamodelPackage.OPTION: {
+			Option option = (Option) theEObject;
+			T result = caseOption(option);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -556,6 +622,81 @@ public class PathwayMetamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAction(Action object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcess(pathwayMetamodel.Process object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pause</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePause(Pause object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItem(Item object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Choice</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChoice(Choice object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOption(Option object) {
 		return null;
 	}
 

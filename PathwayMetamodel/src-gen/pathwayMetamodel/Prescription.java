@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link pathwayMetamodel.Prescription#getMedication <em>Medication</em>}</li>
+ *   <li>{@link pathwayMetamodel.Prescription#getItem <em>Item</em>}</li>
  * </ul>
  *
  * @see pathwayMetamodel.PathwayMetamodelPackage#getPrescription()
@@ -22,19 +22,19 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Prescription extends Element {
 	/**
-	 * Returns the value of the '<em><b>Medication</b></em>' containment reference list.
-	 * The list contents are of type {@link pathwayMetamodel.Medication}.
+	 * Returns the value of the '<em><b>Item</b></em>' containment reference list.
+	 * The list contents are of type {@link pathwayMetamodel.Item}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Medication</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Item</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Medication</em>' containment reference list.
-	 * @see pathwayMetamodel.PathwayMetamodelPackage#getPrescription_Medication()
+	 * @return the value of the '<em>Item</em>' containment reference list.
+	 * @see pathwayMetamodel.PathwayMetamodelPackage#getPrescription_Item()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Medication> getMedication();
+	EList<Item> getItem();
 
 } // Prescription

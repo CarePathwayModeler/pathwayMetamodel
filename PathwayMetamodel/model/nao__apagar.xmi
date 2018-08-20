@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pathwayMetamodel:Pathway xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel" id="1122" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/?format=json" name="NAO _APAGAR" code="teste_iago">
+  <element xsi:type="pathwayMetamodel:Process" id="6224" type="Processo" type_verbose="Processo" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/processos/6224/" name="Processo numero 1" description="Descricao blamblsmslbalbal" isInitial="true" outputSequences="//@sequence.0">
+    <action id="552" process_id="6224" service="aprazamento" description="Acao 1"/>
+    <action id="553" process_id="6224" service="classificar_risco" description="Acao 2"/>
+    <action id="554" process_id="6224" service="encaminhar_especialidade" description="Acao 3"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Pause" id="6225" type="Pausa" type_verbose="Pausa" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/pausas/6225/" name="Pausa" description="Parou" inputSequences="//@sequence.0" outputSequences="//@sequence.1"/>
+  <element xsi:type="pathwayMetamodel:Prescription" id="6241" type="Receita" type_verbose="Receita" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/receitas/6241/" name="Receita" description="fgsfdvfdvfd" isTerminal="true" inputSequences="//@sequence.1">
+    <item id="1441" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/receitas/6241/itens-receita/1441/" name="" med_code="7891317423025" presentation="COMP" access="1" quantity="1" period="15" period_unit="DD" frequency="3" frequency_unit="DD" orientations=""/>
+    <item id="1442" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/receitas/6241/itens-receita/1442/" name="" med_code="7894916143202" presentation="FRAS" access="5" quantity="1" period="1" period_unit="DD" frequency="1" frequency_unit="DD" orientations="Dose &#xfa;nica."/>
+  </element>
+  <sequence inputStep="//@element.1" outputStep="//@element.0" id="6226" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/sequencias/6226/" name="S1" description="Incondicional"/>
+  <sequence inputStep="//@element.2" outputStep="//@element.1" id="6242" type="Sequencia" type_verbose="Sequencia" url="http://app-desenv.hapvida.com.br/api/protocolo/clinico/protmed/autoria/protocolos/1122/sequencias/6242/" name="S2" description="Incondicional"/>
+</pathwayMetamodel:Pathway>

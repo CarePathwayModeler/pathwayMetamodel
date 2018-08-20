@@ -11,7 +11,32 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import pathwayMetamodel.*;
+import pathwayMetamodel.Action;
+import pathwayMetamodel.Admission;
+import pathwayMetamodel.AuxiliaryConduct;
+import pathwayMetamodel.Category;
+import pathwayMetamodel.Choice;
+import pathwayMetamodel.Discharge;
+import pathwayMetamodel.Examination;
+import pathwayMetamodel.Information;
+import pathwayMetamodel.Item;
+import pathwayMetamodel.Medication;
+import pathwayMetamodel.Numeric;
+import pathwayMetamodel.Operand;
+import pathwayMetamodel.Operation;
+import pathwayMetamodel.Operator;
+import pathwayMetamodel.Option;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.PathwayMetamodelFactory;
+import pathwayMetamodel.PathwayMetamodelPackage;
+import pathwayMetamodel.Pause;
+import pathwayMetamodel.Prescription;
+import pathwayMetamodel.Procedure;
+import pathwayMetamodel.Question;
+import pathwayMetamodel.Referral;
+import pathwayMetamodel.Sequence;
+import pathwayMetamodel.Treatment;
+import pathwayMetamodel.YesOrNo;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,6 +120,16 @@ public class PathwayMetamodelFactoryImpl extends EFactoryImpl implements Pathway
 			return createProcedure();
 		case PathwayMetamodelPackage.ACTION:
 			return createAction();
+		case PathwayMetamodelPackage.PROCESS:
+			return createProcess();
+		case PathwayMetamodelPackage.PAUSE:
+			return createPause();
+		case PathwayMetamodelPackage.ITEM:
+			return createItem();
+		case PathwayMetamodelPackage.CHOICE:
+			return createChoice();
+		case PathwayMetamodelPackage.OPTION:
+			return createOption();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -318,6 +353,56 @@ public class PathwayMetamodelFactoryImpl extends EFactoryImpl implements Pathway
 	public Action createAction() {
 		ActionImpl action = new ActionImpl();
 		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public pathwayMetamodel.Process createProcess() {
+		ProcessImpl process = new ProcessImpl();
+		return process;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pause createPause() {
+		PauseImpl pause = new PauseImpl();
+		return pause;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Item createItem() {
+		ItemImpl item = new ItemImpl();
+		return item;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Choice createChoice() {
+		ChoiceImpl choice = new ChoiceImpl();
+		return choice;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Option createOption() {
+		OptionImpl option = new OptionImpl();
+		return option;
 	}
 
 	/**

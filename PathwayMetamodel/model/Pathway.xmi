@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pathwayMetamodel:Pathway
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel"
+    xsi:schemaLocation="http://www.example.org/pathwayMetamodel pathwayMetamodel.ecore">
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct"
+      name="Evaluate SEPSIS symptoms"
+      description="Evaluate SEPSIS symptoms"/>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct"
+      name="Evaluate SIRS symptoms"/>
+  <sequence>
+    <operation
+        name="OR"
+        Operator="lessThan">
+      <operand
+          xsi:type="pathwayMetamodel:Operation"
+          name="IF">
+        <operand
+            xsi:type="pathwayMetamodel:YesOrNo"
+            name="A"/>
+        <operand
+            xsi:type="pathwayMetamodel:YesOrNo"
+            name="B"/>
+      </operand>
+      <operand
+          xsi:type="pathwayMetamodel:YesOrNo"
+          name="C"/>
+    </operation>
+  </sequence>
+</pathwayMetamodel:Pathway>

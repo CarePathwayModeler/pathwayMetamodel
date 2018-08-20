@@ -10,22 +10,27 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import pathwayMetamodel.Action;
 import pathwayMetamodel.Admission;
 import pathwayMetamodel.AuxiliaryConduct;
 import pathwayMetamodel.Category;
+import pathwayMetamodel.Choice;
 import pathwayMetamodel.Discharge;
 import pathwayMetamodel.Element;
 import pathwayMetamodel.Examination;
 import pathwayMetamodel.Information;
+import pathwayMetamodel.Item;
 import pathwayMetamodel.Medication;
 import pathwayMetamodel.Numeric;
 import pathwayMetamodel.Operand;
 import pathwayMetamodel.Operation;
 import pathwayMetamodel.Operator;
+import pathwayMetamodel.Option;
 import pathwayMetamodel.Pathway;
 import pathwayMetamodel.PathwayMetamodelFactory;
 import pathwayMetamodel.PathwayMetamodelPackage;
+import pathwayMetamodel.Pause;
 import pathwayMetamodel.Prescription;
 import pathwayMetamodel.Procedure;
 import pathwayMetamodel.Question;
@@ -194,6 +199,41 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass processEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pauseEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass itemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass choiceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass optionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum operatorEEnum = null;
 
 	/**
@@ -244,6 +284,9 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 						: new PathwayMetamodelPackageImpl());
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePathwayMetamodelPackage.createPackageContents();
@@ -723,7 +766,7 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescription_Medication() {
+	public EReference getPrescription_Item() {
 		return (EReference) prescriptionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1254,8 +1297,251 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAction_Service() {
+	public EAttribute getAction_Id() {
 		return (EAttribute) actionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Process_id() {
+		return (EAttribute) actionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Service() {
+		return (EAttribute) actionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Description() {
+		return (EAttribute) actionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcess() {
+		return processEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcess_Action() {
+		return (EReference) processEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPause() {
+		return pauseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItem() {
+		return itemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Id() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Url() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Name() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Med_code() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Presentation() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Access() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Quantity() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Period() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Period_unit() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Frequency() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Frequency_unit() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getItem_Orientations() {
+		return (EAttribute) itemEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChoice() {
+		return choiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChoice_Id() {
+		return (EAttribute) choiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChoice_Weight() {
+		return (EAttribute) choiceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChoice_Value() {
+		return (EAttribute) choiceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChoice_Option() {
+		return (EReference) choiceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOption() {
+		return optionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOption_Description() {
+		return (EAttribute) optionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOption_Weight() {
+		return (EAttribute) optionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1359,7 +1645,7 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		createEReference(treatmentEClass, TREATMENT__PROCEDURE);
 
 		prescriptionEClass = createEClass(PRESCRIPTION);
-		createEReference(prescriptionEClass, PRESCRIPTION__MEDICATION);
+		createEReference(prescriptionEClass, PRESCRIPTION__ITEM);
 
 		admissionEClass = createEClass(ADMISSION);
 		createEAttribute(admissionEClass, ADMISSION__URL);
@@ -1426,7 +1712,39 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		createEAttribute(procedureEClass, PROCEDURE__QUANTITY);
 
 		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__ID);
+		createEAttribute(actionEClass, ACTION__PROCESS_ID);
 		createEAttribute(actionEClass, ACTION__SERVICE);
+		createEAttribute(actionEClass, ACTION__DESCRIPTION);
+
+		processEClass = createEClass(PROCESS);
+		createEReference(processEClass, PROCESS__ACTION);
+
+		pauseEClass = createEClass(PAUSE);
+
+		itemEClass = createEClass(ITEM);
+		createEAttribute(itemEClass, ITEM__ID);
+		createEAttribute(itemEClass, ITEM__URL);
+		createEAttribute(itemEClass, ITEM__NAME);
+		createEAttribute(itemEClass, ITEM__MED_CODE);
+		createEAttribute(itemEClass, ITEM__PRESENTATION);
+		createEAttribute(itemEClass, ITEM__ACCESS);
+		createEAttribute(itemEClass, ITEM__QUANTITY);
+		createEAttribute(itemEClass, ITEM__PERIOD);
+		createEAttribute(itemEClass, ITEM__PERIOD_UNIT);
+		createEAttribute(itemEClass, ITEM__FREQUENCY);
+		createEAttribute(itemEClass, ITEM__FREQUENCY_UNIT);
+		createEAttribute(itemEClass, ITEM__ORIENTATIONS);
+
+		choiceEClass = createEClass(CHOICE);
+		createEAttribute(choiceEClass, CHOICE__ID);
+		createEAttribute(choiceEClass, CHOICE__WEIGHT);
+		createEAttribute(choiceEClass, CHOICE__VALUE);
+		createEReference(choiceEClass, CHOICE__OPTION);
+
+		optionEClass = createEClass(OPTION);
+		createEAttribute(optionEClass, OPTION__DESCRIPTION);
+		createEAttribute(optionEClass, OPTION__WEIGHT);
 
 		// Create enums
 		operatorEEnum = createEEnum(OPERATOR);
@@ -1456,6 +1774,10 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1471,7 +1793,9 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 		treatmentEClass.getESuperTypes().add(this.getElement());
 		prescriptionEClass.getESuperTypes().add(this.getElement());
 		informationEClass.getESuperTypes().add(this.getElement());
-		actionEClass.getESuperTypes().add(this.getElement());
+		processEClass.getESuperTypes().add(this.getElement());
+		pauseEClass.getESuperTypes().add(this.getElement());
+		choiceEClass.getESuperTypes().add(this.getVariable());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1595,9 +1919,9 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 
 		initEClass(prescriptionEClass, Prescription.class, "Prescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrescription_Medication(), this.getMedication(), null, "medication", null, 0, -1,
-				Prescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrescription_Item(), this.getItem(), null, "item", null, 0, -1, Prescription.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(admissionEClass, Admission.class, "Admission", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1740,8 +2064,65 @@ public class PathwayMetamodelPackageImpl extends EPackageImpl implements Pathway
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionEClass, Action.class, "Action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Action.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Process_id(), ecorePackage.getEInt(), "process_id", null, 0, 1, Action.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAction_Service(), ecorePackage.getEString(), "service", null, 0, 1, Action.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAction_Description(), ecorePackage.getEString(), "description", null, 0, 1, Action.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(processEClass, pathwayMetamodel.Process.class, "Process", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProcess_Action(), this.getAction(), null, "action", null, 1, -1,
+				pathwayMetamodel.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pauseEClass, Pause.class, "Pause", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getItem_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Item.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Url(), ecorePackage.getEString(), "url", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Med_code(), theXMLTypePackage.getLong(), "med_code", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Presentation(), ecorePackage.getEString(), "presentation", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Access(), ecorePackage.getEString(), "access", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Period(), ecorePackage.getEString(), "period", null, 0, 1, Item.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Period_unit(), ecorePackage.getEString(), "period_unit", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Frequency(), ecorePackage.getEString(), "frequency", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Frequency_unit(), ecorePackage.getEString(), "frequency_unit", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getItem_Orientations(), ecorePackage.getEString(), "orientations", null, 0, 1, Item.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(choiceEClass, Choice.class, "Choice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChoice_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Choice.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChoice_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, Choice.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChoice_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Choice.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoice_Option(), this.getOption(), null, "option", null, 0, -1, Choice.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOption_Description(), ecorePackage.getEString(), "description", null, 0, 1, Option.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOption_Weight(), ecorePackage.getEInt(), "weight", null, 0, 1, Option.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(operatorEEnum, Operator.class, "Operator");

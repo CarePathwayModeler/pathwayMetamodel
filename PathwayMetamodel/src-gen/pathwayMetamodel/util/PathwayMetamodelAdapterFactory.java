@@ -9,7 +9,32 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import pathwayMetamodel.*;
+import pathwayMetamodel.Action;
+import pathwayMetamodel.Admission;
+import pathwayMetamodel.AuxiliaryConduct;
+import pathwayMetamodel.Category;
+import pathwayMetamodel.Choice;
+import pathwayMetamodel.Discharge;
+import pathwayMetamodel.Element;
+import pathwayMetamodel.Examination;
+import pathwayMetamodel.Information;
+import pathwayMetamodel.Item;
+import pathwayMetamodel.Medication;
+import pathwayMetamodel.Numeric;
+import pathwayMetamodel.Operand;
+import pathwayMetamodel.Operation;
+import pathwayMetamodel.Option;
+import pathwayMetamodel.Pathway;
+import pathwayMetamodel.PathwayMetamodelPackage;
+import pathwayMetamodel.Pause;
+import pathwayMetamodel.Prescription;
+import pathwayMetamodel.Procedure;
+import pathwayMetamodel.Question;
+import pathwayMetamodel.Referral;
+import pathwayMetamodel.Sequence;
+import pathwayMetamodel.Treatment;
+import pathwayMetamodel.Variable;
+import pathwayMetamodel.YesOrNo;
 
 /**
  * <!-- begin-user-doc -->
@@ -169,6 +194,31 @@ public class PathwayMetamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAction(Action object) {
 			return createActionAdapter();
+		}
+
+		@Override
+		public Adapter caseProcess(pathwayMetamodel.Process object) {
+			return createProcessAdapter();
+		}
+
+		@Override
+		public Adapter casePause(Pause object) {
+			return createPauseAdapter();
+		}
+
+		@Override
+		public Adapter caseItem(Item object) {
+			return createItemAdapter();
+		}
+
+		@Override
+		public Adapter caseChoice(Choice object) {
+			return createChoiceAdapter();
+		}
+
+		@Override
+		public Adapter caseOption(Option object) {
+			return createOptionAdapter();
 		}
 
 		@Override
@@ -481,6 +531,76 @@ public class PathwayMetamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Process <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pathwayMetamodel.Process
+	 * @generated
+	 */
+	public Adapter createProcessAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Pause <em>Pause</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pathwayMetamodel.Pause
+	 * @generated
+	 */
+	public Adapter createPauseAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Item <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pathwayMetamodel.Item
+	 * @generated
+	 */
+	public Adapter createItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Choice <em>Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pathwayMetamodel.Choice
+	 * @generated
+	 */
+	public Adapter createChoiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Option <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see pathwayMetamodel.Option
+	 * @generated
+	 */
+	public Adapter createOptionAdapter() {
 		return null;
 	}
 
