@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pathwayMetamodel:Pathway
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pathwayMetamodel="http://www.example.org/pathwayMetamodel"
+    xsi:schemaLocation="http://www.example.org/pathwayMetamodel pathwayMetamodel.ecore"
+    name="">
+  <element xsi:type="pathwayMetamodel:Treatment"
+      name="Request Exams"
+      description=""
+      outputSequences="//@sequence.0">
+    <examination
+        url="Complete Blood Count"/>
+    <examination
+        url="Urine test and culture"/>
+    <examination
+        url="Blood culture"/>
+    <examination
+        url="Urea, creatinine"/>
+    <examination
+        url="C reactive protein"/>
+    <examination
+        url="Antibiogram"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:AuxiliaryConduct"
+      name="Evaluate Results"
+      inputSequences="//@sequence.0"
+      outputSequences="//@sequence.1 //@sequence.2">
+    <questions
+        text="Is the patient stable and with no signs of complications?"/>
+    <questions
+        text="Altered liver functions, obstructed uropathy, abscess, immune suppression, pregnant, elderly,  complicated oral hydration?"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Treatment"
+      name="Hospital Treatment"
+      inputSequences="//@sequence.1"
+      outputSequences="//@sequence.3">
+    <examination
+        url="Blood Culture"/>
+    <medication
+        name="Unasyn 3G"/>
+    <medication
+        name="Cypro 200mg"/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Prescription"
+      type_verbose=""
+      url=""
+      name="Prescription"
+      inputSequences="//@sequence.2">
+    <item name="Ciprofloxacino 500Mg"/>
+    <item name="Levofloxacin 500Mg"/>
+    <item name="Buscopan"/>
+    <item name="Paco 30Mg"/>
+    <item name="Tramadol 50Mg"
+        orientations=""/>
+    <item name="Bromopride 10Mg"
+        orientations=""/>
+    <item name="Amoxicillin/Clavulanate 875/125Mg"
+        period=""
+        orientations=""/>
+    <item name="Dipyrone 1G"
+        orientations=""/>
+  </element>
+  <element xsi:type="pathwayMetamodel:Information"
+      name="Discuss with local supervisor"
+      inputSequences="//@sequence.3"/>
+  <sequence
+      inputStep="//@element.1"
+      outputStep="//@element.0"
+      name="S1"
+      description=""/>
+  <sequence
+      inputStep="//@element.2"
+      outputStep="//@element.1"
+      type=""
+      url=""
+      name="S2"
+      description="Irregular"/>
+  <sequence
+      inputStep="//@element.3"
+      outputStep="//@element.1"
+      type=""
+      type_verbose=""
+      name="S3"
+      description="No Irregularity"/>
+  <sequence
+      inputStep="//@element.4"
+      outputStep="//@element.2"
+      type_verbose=""
+      url=""
+      name="S4"/>
+</pathwayMetamodel:Pathway>

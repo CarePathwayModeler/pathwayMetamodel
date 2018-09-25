@@ -7,19 +7,47 @@
     xsi:schemaLocation="http://www.example.org/pathwayMetamodel pathwayMetamodel.ecore">
   <element xsi:type="pathwayMetamodel:AuxiliaryConduct"
       name="Vacinacao"
-      outputSequences="//@sequence.0 //@sequence.1 //@sequence.2"/>
+      outputSequences="//@sequence.0 //@sequence.1 //@sequence.2">
+    <questions
+        text="Necessita_Vacinacao">
+      <answers
+          xsi:type="pathwayMetamodel:YesOrNo"
+          name="necessita_vacinacao"/>
+    </questions>
+    <questions
+        text="Idade"/>
+    <questions
+        text="Peso"/>
+  </element>
   <element xsi:type="pathwayMetamodel:Treatment"
       name="Grau 1"
       inputSequences="//@sequence.0"
-      outputSequences="//@sequence.3"/>
+      outputSequences="//@sequence.3">
+    <examination
+        url="Hemograma Completo"/>
+    <medication
+        name="Novalgina"/>
+    <medication
+        name="Dipirona"/>
+  </element>
   <element xsi:type="pathwayMetamodel:Treatment"
       name="Grau 2"
       inputSequences="//@sequence.1"
-      outputSequences="//@sequence.4"/>
+      outputSequences="//@sequence.4">
+    <examination
+        url="Sumario de Urina"/>
+    <examination
+        url="Cardiotocografia"/>
+  </element>
   <element xsi:type="pathwayMetamodel:Treatment"
       name="Grau 3"
       inputSequences="//@sequence.2"
-      outputSequences="//@sequence.5"/>
+      outputSequences="//@sequence.5">
+    <examination
+        url="Potássio"/>
+    <procedure
+        url="Manobra de Epley"/>
+  </element>
   <element xsi:type="pathwayMetamodel:Information"
       name="Info 1"
       inputSequences="//@sequence.3 //@sequence.4"/>
